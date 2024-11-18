@@ -79,7 +79,6 @@ h1 {
 .btn {
     width: 235px;
     height: 56px;
-    padding: 20px 32px;
     border-radius: 20px;
     opacity: 0px;
     background-color: rgba(24, 28, 41, 1);
@@ -100,12 +99,25 @@ h1 {
     text-transform: uppercase;
 }
 
+.btn a {
+    color: white;
+    transition: all 1s;
+    display: block;
+    padding: 20px 32px;
+}
 
-.btn:hover {
+
+.btn:hover  {
     background-color:white;
     color: rgba(24, 28, 41, 1);
     transition: all 1s;
 }
+
+.btn:hover a {
+    color: rgba(24, 28, 41, 1);
+    transition: all 1s;
+}
+
 
 header {
     display: flex;
@@ -529,6 +541,10 @@ h3 {
     text-align: center;
     transition: all 0.5s;
     text-transform: uppercase;
+}
+
+.btn a {
+    display: block;
 }
 
 footer {
