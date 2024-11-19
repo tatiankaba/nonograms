@@ -138,7 +138,7 @@ nav ul li.gifts-disabled-menu-item {
     pointer-events: none;
     background-color: rgba(255, 70, 70, 0.1);
     color:var(--Primary);
-    border-radius: 20px;
+    border-radius: 12px;
 }
 
 nav ul li.gifts-disabled-menu-item a {
