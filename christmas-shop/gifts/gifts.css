@@ -235,6 +235,15 @@ footer {
     height: 40px;
 }
 
+.socials a svg path {
+    transition: all 0.5s;
+}
+
+.socials a:hover svg path {
+    stroke:  var(--Primary);
+    transition: all 0.5s;
+}
+
 .caption.hero_caption {
     margin-top: 12px;
 }
@@ -246,6 +255,16 @@ footer {
     line-height: 23.68px;
     text-align: center;
     margin-top: 5px;
+}
+
+.caption.footer_caption {
+    color: var(--Dark);
+    transition: all 0.5s;
+}
+
+.caption.footer_caption:hover {
+    color: var(--Primary);
+    transition: all 0.5s;
 }
 
 .cards_container {
