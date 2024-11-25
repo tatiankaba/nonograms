@@ -28,13 +28,8 @@ a {
     color:black;
 }
 
-body {
-    width: 1440px;
-    margin: 0 auto;
-}
-
 .container {
-    width: 1440px; 
+    max-width: 1440px; 
     margin: 0 auto; 
 }
 
@@ -80,10 +75,6 @@ header {
     padding: 12px 82px;
 }
 
-nav {
-    display: flex;
-}
-
 .logo_image {
     width: 24px;
     height: 24px;
@@ -91,10 +82,10 @@ nav {
 }
 
 .logo {
-    padding:8px 20px;
+    padding: 8px 20px;
     cursor: pointer;
     display: flex;
-    gap: 8px;
+    column-gap: 8px;
     align-items: center;
 }
 
@@ -105,12 +96,11 @@ nav {
     line-height:  15.6px;
     letter-spacing:  5%;
     text-transform: uppercase;
-    color: rgba(24, 28, 41, 1);
+    color: var(--Dark);
 }
 
 
 nav ul li {
-    list-style-type: none;
     flex-basis: 1;
 }
 
@@ -131,7 +121,7 @@ nav ul li a {
 nav ul {
     display: flex;
     align-items: center;
-    gap: 12px;
+    column-gap: 12px;
 }
 
 nav ul li.gifts-disabled-menu-item {
@@ -145,11 +135,6 @@ nav ul li.gifts-disabled-menu-item a {
     color:var(--Primary);
 }
 
-nav ul li a:hover {
-    background-color: rgba(255, 70, 70, 0.1);
-    color: rgba(255, 70, 70, 1);
-    transition: all 0.5s;
-}
 
 .gifts {
     padding: 60px 82px;
@@ -164,20 +149,17 @@ nav ul li a:hover {
     display: flex;
     column-gap: 12px;
     max-width: 1276px;
+    justify-content: center;
 }
 
 .gift_item {
+    flex-direction: column;
     background-color: var(--Content-Background);
-    flex: 1;
+    flex-basis: 33%;
     border-radius: 20px;
     text-align: center;
     padding: 20px 0;
     color: var(--Dark);
-    transition: all 0.5s;
-}
-
-.gift_item:hover .gift_item_text, .gift_item:hover .gift_invite {
-    color: var(--Primary);
     transition: all 0.5s;
 }
 
@@ -245,10 +227,10 @@ footer {
     transition: all 0.5s;
 }
 
-.socials a:hover svg path {
-    stroke:  var(--Primary);
-    transition: all 0.5s;
+.socials a svg {
+    fill: none;
 }
+
 
 .caption.hero_caption {
     margin-top: 12px;
@@ -268,10 +250,6 @@ footer {
     transition: all 0.5s;
 }
 
-.caption.footer_caption:hover {
-    color: var(--Primary);
-    transition: all 0.5s;
-}
 
 .cards_container {
     display: flex;
@@ -280,6 +258,7 @@ footer {
     margin-top: 20px;
     flex-wrap: wrap;
     padding: 0 82px 60px 82px;
+    justify-content: center;
 }
 
 .card {
@@ -295,10 +274,6 @@ footer {
     text-transform: uppercase;
 }
 
-.card:hover .card_desc {
-    color: var(--Primary);
-    transition: all 0.5s;
-}
 
 .img_container {
     width: 310px;
@@ -391,12 +366,59 @@ div.tab.disable {
 
 
 .tab.disable {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: transparent;
     pointer-events: none;
 }
 
-.tab:hover {
-    background-color:  rgba(255, 255, 255, 0.1);
-    transition: all 0.5s;
-}
 
+
+@media (hover: hover) {
+
+    .btn:hover  {
+        background-color:white;
+        color: rgba(24, 28, 41, 1);
+        transition: all 1s;
+    }
+    
+    .btn:hover a {
+        color: rgba(24, 28, 41, 1);
+        transition: all 1s;
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(255, 70, 70, 0.1);
+        color: rgba(255, 70, 70, 1);
+        transition: all 0.5s;
+    }
+
+    .gift_item:hover .gift_item_text, .gift_item:hover .gift_invite {
+        color: var(--Primary);
+        transition: all 0.5s;
+    }
+
+    .card:hover .card_desc {
+        color: var(--Primary);
+        transition: all 0.5s;
+    }
+
+    .gift_item:hover .gift_item_text, .gift_item:hover .gift_invite {
+        color: var(--Primary);
+        transition: all 0.5s;
+    }
+
+    .socials a:hover svg path {
+        stroke:  var(--Primary);
+        transition: all 0.5s;
+    }
+    
+    .caption.footer_caption:hover {
+        color: var(--Primary);
+        transition: all 0.5s;
+    }
+
+    .tab:hover {
+        background-color:  rgba(255, 255, 255, 0.1);
+        transition: all 0.5s;
+    }
+
+}
