@@ -328,7 +328,7 @@ h3 {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    max-width: 464px;
+    max-width: 29.625em;
     gap: 4.8px;
 }
 
@@ -346,7 +346,7 @@ h3 {
     font-size: 12px;
     font-weight: 600;
     line-height: 15.6px;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     border-radius: 12px;
 }
