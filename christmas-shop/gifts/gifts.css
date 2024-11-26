@@ -39,7 +39,10 @@ main {
 }
 
 .headline {
-    background: url(../images/bg-garland.png) center center/cover no-repeat;
+    background-image: url(../images/bg-garland.png);
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
     padding: 60px 0 0 0;
 
 }
@@ -496,13 +499,6 @@ div.tab.disable {
   @media (max-width: 768px) {
 
     .headline {
-
-        background: url(../images/bg-garland.png) center center/cover no-repeat;
-        background-size: contain, contain;
-        background-position: center calc(50% - 45px); 
-        padding: 60px 0 0 0;
-        
-    
         padding: 60px 8px 0;
     }
 
@@ -564,16 +560,6 @@ div.tab.disable {
   }
 
 
-  @media (max-width:600px) {
-    .headline {
-        background: url(../images/bg-garland.png) center center/cover no-repeat;
-        background-size: contain, contain;
-        background-position: center calc(50% - 70px); 
-      }
-
-  }
-
-
   @media (max-width:460px) {
     .tab a {
         padding: 12px 8px;
@@ -582,14 +568,6 @@ div.tab.disable {
     .tabs {
         gap: 0;
     }
-  }
-
-  @media (max-width:380px) {
-    .headline {
-        background: url(../images/bg-garland.png) center center/cover no-repeat;
-        background-size: contain, contain;
-        background-position: center calc(50% - 125px); 
-      }
   }
 
 
