@@ -217,6 +217,7 @@ h2 {
 .slider {
     padding: 55px 82px 60px 82px;
     overflow: hidden;
+    background: url(images/bg-snow.png) center center/cover no-repeat;
 }
 .slider_title {
     color: white;
