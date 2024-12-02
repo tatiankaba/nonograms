@@ -117,3 +117,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
   
+  // add scroll button
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopBtn = document.querySelector('.scrollToTopBtn');
+  
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 300) {
+        scrollToTopBtn.style.opacity = 1;
+      } else {
+        scrollToTopBtn.style.opacity = 0;
+      }
+    });
+  
+    scrollToTopBtn.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+      });
+    });
+  });
+  
