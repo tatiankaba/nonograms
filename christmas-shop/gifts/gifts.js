@@ -19,7 +19,8 @@ const menuLinks = Array.from(document.getElementsByClassName('menu_link'));
 function changeBurgerMenu() {
     burgerBtn.classList.toggle('active');
     burgerMenu.classList.toggle('hidden');
-    body.classList.toggle('overflow')
+    body.classList.toggle('overflow');
+    menuLinks[0].classList.remove('gifts-disabled-menu-item')
 }
 
 burgerBtn.addEventListener('click', changeBurgerMenu);
