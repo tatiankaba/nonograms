@@ -8,17 +8,24 @@ function showAlert() {
 
 mediaQueryList.addEventListener("change", showAlert);
 
-// add burger-menu animation
+//constants
+
 const body = document.body;
 const burgerBtn = document.querySelector('.menu_burger');
 const burgerMenu = document.querySelector('nav');
+const menuLinks = Array.from(document.getElementsByClassName('menu_link'));
 
-function showMenu() {
+// add burger-menu animation
+function changeBurgerMenu() {
     burgerBtn.classList.toggle('active');
     burgerMenu.classList.toggle('hidden');
     body.classList.toggle('overflow')
 }
 
-burgerBtn.addEventListener('click', showMenu);
+burgerBtn.addEventListener('click', changeBurgerMenu);
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", changeBurgerMenu)
+});
 
 

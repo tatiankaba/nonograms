@@ -9,6 +9,9 @@
     --Static-White: rgba(255, 255, 255, 1);
   }
 
+  .slider_carousel {
+    position: relative;
+}
 
 a {
     text-decoration: none;
@@ -248,6 +251,7 @@ h2 {
     text-transform: uppercase;
     align-items: center;
     color: white;
+    transition: right ease-in-out 0.5s;
 }
 
 .slider_navigation {
@@ -696,10 +700,14 @@ footer {
 
   @media (max-width: 768px) {
 
+    .slider {
+        padding-block: 8px;
+    }
+
     .active .menu_divider:first-child {
         top: 50%;
         transform: rotate(45deg)  translate(0,50%);
-        transition: all linear 250ms;
+        transition: all linear 200ms;
         margin-top: 2px;
         border: 1px;
 
@@ -708,7 +716,7 @@ footer {
     .active .menu_divider:last-child {
         top: 50%;
         transform: rotate(-45deg)  translate(0, -50%);
-        transition: all linear 250ms;
+        transition: all linear 200ms;
         margin-top: -1px;
         border: 1px;
     }
@@ -726,7 +734,8 @@ footer {
         right: 0;
         top: 55px;
         background-color: white;
-        transition: all linear 0.5s;
+        transition: all ease-out 0.4s;
+        opacity: 1;
     }
 
     nav ul {
@@ -757,6 +766,8 @@ footer {
         visibility: hidden;
         top: 55px;
         right: -100%;
+        transition: all ease-out 0.4s;
+        opacity: 1;
     }
     .about {
       padding-inline: 8px; 
@@ -786,7 +797,7 @@ footer {
         background-color: var(--Dark);
         width: 20px;
         height: 2px;
-        transition: all linear 250ms;
+        transition: all linear 200ms;
     }
 
     .menu_divider:last-child {

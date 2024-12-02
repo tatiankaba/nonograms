@@ -526,7 +526,8 @@ div.tab.disable {
         right: 0;
         top: 55px;
         background-color: white;
-        transition: all linear 0.5s;
+        transition: all ease-out 0.4s;
+        opacity: 1;
     }
 
     nav ul {
@@ -557,6 +558,8 @@ div.tab.disable {
         visibility: hidden;
         top: 55px;
         right: -100%;
+        transition: all ease-out 0.4s;
+        opacity: 0;
     }
 
     .headline {
