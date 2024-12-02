@@ -362,9 +362,6 @@ div.tab.disable {
     pointer-events: none;
 }
 
-.menu_burger {
-    display: none;
-}
 
 
 
@@ -498,6 +495,70 @@ div.tab.disable {
 
   @media (max-width: 768px) {
 
+
+    .active .menu_divider:first-child {
+        top: 50%;
+        transform: rotate(45deg)  translate(0,50%);
+        transition: all linear 250ms;
+        margin-top: 2px;
+        border: 1px;
+
+    }
+
+    .active .menu_divider:last-child {
+        top: 50%;
+        transform: rotate(-45deg)  translate(0, -50%);
+        transition: all linear 250ms;
+        margin-top: -1px;
+        border: 1px;
+    }
+
+    body.overflow {
+        overflow: hidden;
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        position: fixed;
+        right: 0;
+        top: 55px;
+        background-color: white;
+        transition: all linear 0.5s;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 100vh;
+        align-items:center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36.48px;
+        letter-spacing: 0.16em;
+    }
+
+
+
+    nav.hidden {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 55px;
+        right: -100%;
+    }
+
     .headline {
         padding: 60px 8px 0;
     }
@@ -510,11 +571,6 @@ div.tab.disable {
     .tabs {
         padding-inline: 5px;
     }
-
-    nav {
-        display: none;
-    }
-
 
     header {
         padding-inline: 8px;
@@ -539,14 +595,14 @@ div.tab.disable {
         width: 40px;
         height: 40px;
         padding: 15px 10px;
+        cursor: pointer;
     }
 
     .menu_divider {
         background-color: var(--Dark);
         width: 20px;
         height: 2px;
-        cursor: pointer;
-
+        transition: all linear 250ms;
     }
 
     .menu_divider:last-child {

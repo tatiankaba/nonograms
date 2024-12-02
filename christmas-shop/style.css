@@ -697,13 +697,24 @@ footer {
   @media (max-width: 768px) {
 
     .active .menu_divider:first-child {
-        transform: rotate(45deg);
-        translate: 50% 50%;
+        top: 50%;
+        transform: rotate(45deg)  translate(0,50%);
+        transition: all linear 250ms;
+        margin-top: 2px;
+        border: 1px;
+
     }
 
     .active .menu_divider:last-child {
-        transform: rotate(-45deg);
-        translate: 50% 50%;
+        top: 50%;
+        transform: rotate(-45deg)  translate(0, -50%);
+        transition: all linear 250ms;
+        margin-top: -1px;
+        border: 1px;
+    }
+
+    body.overflow {
+        overflow: hidden;
     }
 
     header {
@@ -729,6 +740,16 @@ footer {
         justify-content: center;
         gap: 8px;
     }
+
+    nav ul li a {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 36.48px;
+        letter-spacing: 0.16em;
+    }
+
+
 
     nav.hidden {
         display: block;
@@ -765,6 +786,7 @@ footer {
         background-color: var(--Dark);
         width: 20px;
         height: 2px;
+        transition: all linear 250ms;
     }
 
     .menu_divider:last-child {
@@ -789,6 +811,7 @@ footer {
 }
 
 @media (max-width: 380px) {
+
 
     .CTA_title {
         letter-spacing: 3.6px;
