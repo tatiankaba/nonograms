@@ -55,11 +55,6 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    max-width: 500px;
-    width: 80%;
-    border-radius: 8px;
   }
   
   .modal_close {
@@ -68,20 +63,7 @@ main {
     right: 10px;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  .superpowers {
-    margin-top: 15px;
-  }
-  
-  .superpowers div {
-    margin-bottom: 10px;
-  }
-  
-  .card_description {
-    margin-top: 15px;
-  }
-  
+  }  
   body.modal-open {
     overflow: hidden;
   }
@@ -416,6 +398,17 @@ div.tab.disable {
     display: none;
 }
 
+.superpowers {
+    display: flex;
+}
+
+.star {
+    display: flex;
+}
+
+.star svg {
+    opacity: 0.1;
+}
 
 @media (hover: hover) and (pointer: fine) {
 
