@@ -105,8 +105,9 @@ function formatNumber(num) {
 function updateCountdown() {
 
 
-    const now = new Date();
-    const currentTimeInUTC = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), now.getUTCHours(), now.getUTCMinutes(), now.getUTCSeconds());
+    const now = new Date(); 
+    const currentTimeInUTC = new Date(now.getTime() - now.getTimezoneOffset() * 60000); 
+
     const targetDate = Date.UTC(now.getUTCFullYear() + 1, 0, 1, 0, 0, 0); 
 
 
