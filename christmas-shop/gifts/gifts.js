@@ -155,15 +155,7 @@ mediaQueryMin768.addEventListener('change', ()=> {
 
   // modal window
 
-  function openModal(card) {
-    createModalCard(card);
-    body.style.overflow = 'hidden'
-  };
-
-  function closeModal(card) {
-    modal.style.display = 'none';
-    body.style.overflow = 'auto'; 
-  };
+  const snowFlakes = document.querySelectorAll('.star svg');
 
   function createModalCard(card) {
 
@@ -176,6 +168,17 @@ mediaQueryMin768.addEventListener('change', ()=> {
     const modalPowersArray = Object.keys(card.superpowers);
     const modalImg = document.querySelector('[data-modalImg="modal_img"]'); 
     const modalForCategory = document.querySelector('[data-modalName="modal_card_category"]');
+
+    for(let i = 0; i < modalPointsArray.length; i++) {
+
+      for(let c = 0; c < (parseInt(modalPointsArray[i])/100); c++) {
+        const modalSnowflakesContainer = document.getElementsByClassName('star');
+        const snowflakes = modalSnowflakesContainer[i].getElementsByTagName('svg');
+        snowflakes[c].style.opacity = '1';
+      };
+
+    };
+
 
 
     modalForCategory.textContent = card.category.toUpperCase();
@@ -196,21 +199,33 @@ mediaQueryMin768.addEventListener('change', ()=> {
       modalPoints[i].textContent = modalPointsArray[i]
     };
 
+    
+
     modalCardDesc.textContent = card.description;
     modalCardName.textContent = card.name;
     modalClose.addEventListener('click', closeModal);
     modal.addEventListener('click', (event) => {
       if(event.target == modal) {
-        closeModal()
+        closeModal();
+        for (let snowFlake of snowFlakes) {
+          snowFlake.style.opacity = '0.1'
+        }
       }
     });
 
   }
 
+  function openModal(card) {
+    createModalCard(card);
+    body.style.overflow = 'hidden'
+  };
 
-    
-  
-
+  function closeModal(card) {
+    modal.style.display = 'none';
+    body.style.overflow = 'auto'; 
+    for (let snowFlake of snowFlakes) {
+      snowFlake.style.opacity = '0.1'
+  }};
 
   });
   
