@@ -162,7 +162,7 @@ function displayRandomCards(gifts) {
         };
         cardElement.innerHTML = `
             <div class="img_container">
-                <img src="../images/${imageCard}" alt="pic">
+                <img src="images/${imageCard}" alt="pic">
             </div>
             <div class="card_text">
                 <h4 class="for_what ${cardTitleClass}">${card.category}</h4>

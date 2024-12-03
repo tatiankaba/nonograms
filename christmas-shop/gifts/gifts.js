@@ -14,6 +14,8 @@ const body = document.body;
 const burgerBtn = document.querySelector('.menu_burger');
 const burgerMenu = document.querySelector('nav');
 const menuLinks = Array.from(document.getElementsByClassName('menu_link'));
+const tabs = document.querySelectorAll('.tabs .tab');
+const cardsContainer = document.querySelector('.cards_container');
 
 // add burger-menu animation
 function changeBurgerMenu() {
@@ -40,9 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json(); 
       })
       .then(gifts => {
-
-        const tabs = document.querySelectorAll('.tabs .tab');
-        const cardsContainer = document.querySelector('.cards_container');
 
         function createCard(gift) {
           const card = document.createElement('div');
@@ -151,8 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(gifts => {
   
-        const tabs = document.querySelectorAll('.tabs .tab');
-        const cardsContainer = document.querySelector('.cards_container');
+
         const modal = document.getElementById('modal');
         const modalClose = document.getElementById('modal_close');
         const modalName = document.getElementById('modal_name');
@@ -175,9 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
           
           const categoryElement = document.createElement('h4');
           let categoryClass = gift.category.toLowerCase().replace(/\s+/g, '');
-          if (categoryClass === 'for work') categoryClass = 'work';
-          if (categoryClass === 'for health') categoryClass = 'health';
-          if (categoryClass === 'for harmony') categoryClass = 'harmony';
+          if (categoryClass === 'For work') categoryClass = 'work';
+          if (categoryClass === 'For health') categoryClass = 'health';
+          if (categoryClass === 'For harmony') categoryClass = 'harmony';
           categoryElement.classList.add('for_what', `${categoryClass}`);
           categoryElement.textContent = `${gift.category}`;
   
