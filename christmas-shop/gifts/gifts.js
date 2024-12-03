@@ -58,10 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
           cardText.classList.add('card_text');
           
           const categoryElement = document.createElement('h4');
-          let categoryClass = gift.category.toLowerCase().replace(/\s+/g, ''); 
-          if (categoryClass === 'forwork') categoryClass = 'work';
-          if (categoryClass === 'forhealth') categoryClass = 'health';
-          if (categoryClass === 'forharmony') categoryClass = 'harmony';
+  
+          let categoryClass = '';
+          if (gift.category == 'For Work') categoryClass = 'work';
+          if (gift.category == 'For Health') categoryClass = 'health';
+          if (gift.category == 'For Harmony') categoryClass = 'harmony';
           categoryElement.classList.add('for_what', `${categoryClass}`);
           categoryElement.textContent = `${gift.category}`;
   
@@ -172,10 +173,10 @@ document.addEventListener('DOMContentLoaded', () => {
           cardText.classList.add('card_text');
           
           const categoryElement = document.createElement('h4');
-          let categoryClass = gift.category.toLowerCase().replace(/\s+/g, '');
-          if (categoryClass === 'For work') categoryClass = 'work';
-          if (categoryClass === 'For health') categoryClass = 'health';
-          if (categoryClass === 'For harmony') categoryClass = 'harmony';
+          let categoryClass = '';
+          if (gift.category === 'For Work') categoryClass = 'work';
+          if (gift.category === 'For Health') categoryClass = 'health';
+          if (gift.category === 'For Harmony') categoryClass = 'harmony';
           categoryElement.classList.add('for_what', `${categoryClass}`);
           categoryElement.textContent = `${gift.category}`;
   
