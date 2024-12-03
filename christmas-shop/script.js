@@ -10,6 +10,8 @@ const sliderLine = document.querySelector('.slider_carousel');
 const sliderItemsArray = document.getElementsByClassName('slider_item');
 const sliderPrevBtn =  document.querySelector('.prev');
 const sliderNextBtn =  document.querySelector('.next');
+const mediaQuery768 = window.matchMedia('(max-width: 768px)');
+const mediaQueryMin768 = window.matchMedia('(min-width: 768px)');
 
 
 // add burger-menu animation
@@ -17,7 +19,7 @@ const sliderNextBtn =  document.querySelector('.next');
 function changeBurgerMenu() {
     burgerBtn.classList.toggle('active');
     burgerMenu.classList.toggle('hidden');
-    body.classList.toggle('overflow')
+    body.classList.toggle('overflow');
 }
 
 burgerBtn.addEventListener('click', changeBurgerMenu);
@@ -26,12 +28,19 @@ menuLinks.forEach(link => {
     link.addEventListener('click',changeBurgerMenu)
 });
 
+mediaQueryMin768.addEventListener('change', ()=> {
+    burgerBtn.classList.remove('active');
+    burgerMenu.classList.add('hidden');
+    body.classList.remove('overflow');
+});
+
 // add interactivity to slider
 
 let offset = 0;
 let numberOfClickCounts = 3;
 
-const mediaQuery768 = window.matchMedia('(max-width: 768px)');
+
+
 
 function changeNumberOfCounts() {
     if (mediaQuery768.matches) {

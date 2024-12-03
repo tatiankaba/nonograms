@@ -17,8 +17,10 @@ const modalClose = document.getElementById('modal_close');
 const modalName = document.getElementById('modal_name');
 const modalDescription = document.getElementById('modal_description');
 const modalSuperpowers = document.getElementById('modal_superpowers');
-
+const mediaQueryMin768 = window.matchMedia('(min-width: 768px)');
 const mediaQueryList = window.matchMedia("(max-width: 768px)");
+
+
 
 
 // add burger-menu animation
@@ -33,6 +35,12 @@ burgerBtn.addEventListener('click', changeBurgerMenu);
 
 menuLinks.forEach(link => {
     link.addEventListener("click", changeBurgerMenu)
+});
+
+mediaQueryMin768.addEventListener('change', ()=> {
+  burgerBtn.classList.remove('active');
+  burgerMenu.classList.add('hidden');
+  body.classList.remove('overflow');
 });
 
 // interactivity to tabs
