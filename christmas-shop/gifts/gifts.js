@@ -174,8 +174,14 @@ mediaQueryMin768.addEventListener('change', ()=> {
     const modalPoints = document.getElementsByClassName('point');
     const modalPointsArray = Object.values(card.superpowers);
     const modalPowersArray = Object.keys(card.superpowers);
-    const modalImg = document.querySelector('[data-modalImg="modal_img"]');
+    const modalImg = document.querySelector('[data-modalImg="modal_img"]'); 
+    const modalForCategory = document.querySelector('[data-modalName="modal_card_category"]');
 
+
+    modalForCategory.textContent = card.category.toUpperCase();
+    let modalForCategoryClass = card.category.split(' ').splice(1).join('').toLowerCase();
+    console.log(modalForCategoryClass);
+    modalForCategory.classList.add(`${modalForCategoryClass}`)
     modal.style.display = 'block';
     modal.style.cursorPointer = 'none';
     modalCardContainer.style.cursor = 'auto';

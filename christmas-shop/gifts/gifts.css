@@ -54,7 +54,7 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -75%);
   }
   
   .modal_close {
@@ -398,16 +398,77 @@ div.tab.disable {
     display: none;
 }
 
+.card.modal_card_container {
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.modal_card_container .img_container {
+    margin: 0 auto;
+}
+
 .superpowers {
     display: flex;
+    gap: 12px;
+    align-items:center;
+    margin-top: 20px;
+}
+
+.modal_name {
+    margin-top: 8px;
+}
+
+.powers {
+    text-align: left;
+    flex-basis: 33.9%;
+}
+
+.power_item {
+    padding-block: 4px;
+}
+
+.points {
+    text-align: right;
+    flex-basis: 33.9%;
+}
+
+.point {
+    padding-block: 4px;
+}
+
+.stars {
+    flex-basis: 33.9%;
+
 }
 
 .star {
     display: flex;
+    justify-content: start;
+    padding-block: 4px;
+    align-items:center;
 }
 
 .star svg {
     opacity: 0.1;
+}
+
+.modal_content .card_text {
+    padding: 20px;
+}
+
+.modal_card_desc {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    text-align: left;
+    text-transform: none;
+    margin-top: 8px;
+}
+
+.superpowers_title {
+    margin-top: 20px;
 }
 
 @media (hover: hover) and (pointer: fine) {
