@@ -646,6 +646,7 @@ h4.superpowers_title {
 
 
     .scrollToTopBtn {
+
         width: 56px;
         height: 56px;
         display: block;
@@ -662,6 +663,7 @@ h4.superpowers_title {
         z-index: 1000;
         transition: opacity 0.3s;
         border: 1px solid var(--Primary);
+        opacity: 0;
     }
     
 
