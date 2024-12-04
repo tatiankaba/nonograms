@@ -895,7 +895,7 @@ footer {
         align-items:center;
         justify-content: center;
         gap: 8px;
-    }
+        }
 
     nav ul li a {
         font-family: Montserrat;
@@ -903,6 +903,10 @@ footer {
         font-weight: 600;
         line-height: 36.48px;
         letter-spacing: 0.16em;
+    }
+
+    nav ul li:first-child {
+        margin-top: -55px;
     }
 
 

@@ -396,6 +396,7 @@ div.tab.disable {
 
 .scrollToTopBtn {
     display: none;
+
 }
 
 .card.modal_card_container {
@@ -639,6 +640,11 @@ h4.superpowers_title {
 
   @media (max-width: 768px) {
 
+    nav ul li:first-child {
+        margin-top: -55px;
+    }
+
+
     .scrollToTopBtn {
         width: 56px;
         height: 56px;
@@ -691,6 +697,7 @@ h4.superpowers_title {
         background-color: white;
         transition: all ease-out 0.4s;
         opacity: 1;
+        z-index: 10000;
     }
 
     nav ul {
