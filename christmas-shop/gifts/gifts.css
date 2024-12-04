@@ -410,14 +410,29 @@ div.tab.disable {
 
 .superpowers {
     display: flex;
-    gap: 12px;
-    margin-top: 20px;
-    justify-content: space-between;
+    margin-top: 8px;
+    justify-content: space-evenly;
 }
 
-.modal_name {
+.modal_card_container h4.modal_name {
     margin-top: 8px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24.32px;
+    letter-spacing: 0.08em;
+    text-align: left;
 }
+
+h4.modal_card_category {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    margin-top: 0;
+    }
 
 .powers {
     text-align: left;
@@ -425,7 +440,6 @@ div.tab.disable {
 }
 
 .power_item {
-    padding-block: 4px;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 400;
@@ -440,11 +454,11 @@ div.tab.disable {
 }
 
 .point {
-    padding-block: 4px;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 400;
     line-height: 23.68px;
+    text-align: right;
 }
 
 .stars {
@@ -456,7 +470,7 @@ div.tab.disable {
 
 .star {
     display: flex;
-    justify-content: start;
+    justify-content: end;
     padding-block: 4px;
     align-items:center;
     gap: 8px;
@@ -480,8 +494,14 @@ div.tab.disable {
     margin-top: 8px;
 }
 
-.superpowers_title {
+h4.superpowers_title {
     margin-top: 20px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 15.6px;
+    letter-spacing: 0.05em;
+    text-align: left;
 }
 
 @media (hover: hover) and (pointer: fine) {
