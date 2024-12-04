@@ -1,5 +1,7 @@
 'use strict';
 
+
+document.addEventListener('DOMContentLoaded', ()=> {
 //constants
 
 const body = document.body;
@@ -12,6 +14,15 @@ const sliderPrevBtn =  document.querySelector('.prev');
 const sliderNextBtn =  document.querySelector('.next');
 const mediaQuery768 = window.matchMedia('(max-width: 768px)');
 const mediaQueryMin768 = window.matchMedia('(min-width: 768px)');
+
+//modal constants
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal_close');
+const modalName = document.getElementById('modal_name');
+const modalDescription = document.getElementById('modal_description');
+const modalSuperpowers = document.getElementById('modal_superpowers');
+const snowFlakes = document.querySelectorAll('.star svg');
+
 
 
 // add burger-menu animation
@@ -181,14 +192,89 @@ function displayRandomCards(gifts) {
         `;
         
         cardsContainer.appendChild(cardElement);
+        cardElement.addEventListener('click', () => openModal(card));
     });
 }
-fetch('gifts.json')
-    .then(response => response.json())
-    .then(gifts => {
-        displayRandomCards(gifts);
-    })
-    .catch(error => {
-        console.error('Ошибка при загрузке данных:', error);
+
+    fetch('gifts.json')
+        .then(response => response.json())
+        .then(gifts => {
+            displayRandomCards(gifts);
+        })
+        .catch(error => {
+            console.error('Ошибка при загрузке данных:', error);
+        });
+
+
+
+  function createModalCard(card) {
+
+    const modalCardContainer = document.querySelector('.modal_card_container')
+    const modalCardDesc = document.querySelector('[data-modalDesc="modal_card_desc"]');
+    const modalPowers = document.getElementsByClassName('power_item');
+    const modalPoints = document.getElementsByClassName('point');
+    const modalPointsArray = Object.values(card.superpowers);
+    const modalPowersArray = Object.keys(card.superpowers);
+    const modalImg = document.querySelector('[data-modalImg="modal_img"]'); 
+    const modalCardName = document.querySelector('[data-modalName="modal_card_name"]');
+    const modalForCategory = document.querySelector('[data-modalName="modal_card_category"]');
+
+    for(let i = 0; i < modalPointsArray.length; i++) {
+
+      for(let c = 0; c < (parseInt(modalPointsArray[i])/100); c++) {
+        const modalSnowflakesContainer = document.getElementsByClassName('star');
+        const snowflakes = modalSnowflakesContainer[i].getElementsByTagName('svg');
+        snowflakes[c].style.opacity = '1';
+      };
+
+    };
+
+    modalForCategory.textContent = card.category.toUpperCase();
+    let modalForCategoryClass = card.category.split(' ').splice(1).join('').toLowerCase();
+    modalForCategory.className = `for_what ${modalForCategoryClass}`;
+    modal.style.display = 'block';
+    modal.style.cursorPointer = 'none';
+    modalCardContainer.style.cursor = 'auto';
+
+    modalImg.src = 'images/gift-' + card.category.toLowerCase().replace(/\s+/g, '-') + '.png';
+
+    for(let i = 0; i < modalPowersArray.length; i++) {
+      modalPowers[i].textContent = modalPowersArray[i]
+    };
+
+    for(let i = 0; i < modalPointsArray.length; i++) {
+      modalPoints[i].textContent = modalPointsArray[i]
+    };
+
+    
+
+    modalCardDesc.textContent = card.description;
+    modalCardName.textContent = card.name;
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if(event.target == modal) {
+        closeModal();
+        for (let snowFlake of snowFlakes) {
+          snowFlake.style.opacity = '0.1'
+        };
+      }
     });
 
+  };
+
+  function openModal(card) {
+    createModalCard(card);
+    body.style.overflow = 'hidden';
+  };
+
+  function closeModal(card) {
+    modal.style.display = 'none';
+    body.style.overflow = 'auto'; 
+    for (let snowFlake of snowFlakes) {
+      snowFlake.style.opacity = '0.1';
+  }
+  };
+
+
+
+});

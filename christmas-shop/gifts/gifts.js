@@ -157,9 +157,6 @@ mediaQueryMin768.addEventListener('change', ()=> {
 
   const snowFlakes = document.querySelectorAll('.star svg');
 
-
-
-
   function createModalCard(card) {
 
     const modalCardContainer = document.querySelector('.modal_card_container')
@@ -199,8 +196,6 @@ mediaQueryMin768.addEventListener('change', ()=> {
       modalPoints[i].textContent = modalPointsArray[i]
     };
 
-    
-
     modalCardDesc.textContent = card.description;
     modalCardName.textContent = card.name;
     modalClose.addEventListener('click', closeModal);
@@ -226,5 +221,7 @@ mediaQueryMin768.addEventListener('change', ()=> {
     for (let snowFlake of snowFlakes) {
       snowFlake.style.opacity = '0.1';
   }
-  }});
+  }
+
+});
   

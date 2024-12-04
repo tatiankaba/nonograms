@@ -9,6 +9,123 @@
     --Static-White: rgba(255, 255, 255, 1);
   }
 
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: hidden;
+  }
+  
+  .modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+  
+  .modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }  
+  body.modal-open {
+    overflow: hidden;
+  }
+
+.card.modal_card_container {
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.modal_card_container .img_container {
+    margin: 0 auto;
+}
+
+.superpowers {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.modal_name {
+    margin-top: 8px;
+}
+
+.powers {
+    text-align: left;
+    flex-basis: 33.9%;
+}
+
+.power_item {
+    padding-block: 4px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.points {
+    text-align: right;
+    flex-basis: 33.9%;
+}
+
+.point {
+    padding-block: 4px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+}
+
+.stars {
+    flex-basis: 33.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.star {
+    display: flex;
+    justify-content: start;
+    padding-block: 4px;
+    align-items:center;
+    gap: 8px;
+}
+
+.star svg {
+    opacity: 0.1;
+}
+
+.modal_content .card_text {
+    padding: 20px;
+}
+
+.modal_card_desc {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23.68px;
+    text-align: left;
+    text-transform: none;
+    margin-top: 8px;
+}
+
+.superpowers_title {
+    margin-top: 20px;
+}
+
+
   .slider_carousel {
     position: relative;
     right: 0;
