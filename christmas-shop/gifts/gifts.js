@@ -32,16 +32,11 @@ function changeBurgerMenu() {
     burgerMenu.classList.toggle('hidden');
     body.classList.toggle('overflow');
     menuLinks[0].classList.remove('gifts-disabled-menu-item');
-    setHeaderHeight();
-}
-
-function setHeaderHeight() {
-  const header = document.querySelector('header');
-  const headerHeight = header.offsetHeight;
-  const headerScroll = header.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
-  const headerDynamicHeight = headerHeight + headerScroll.top;
-  burgerMenu.style.top = headerDynamicHeight + 'px'
+    const header = document.querySelector('header');
+    header.scrollIntoView({
+      behavior: 'smooth', 
+      block: 'start'     
+    });
 }
 
 burgerBtn.addEventListener('click', changeBurgerMenu);
