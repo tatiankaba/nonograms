@@ -1,11 +1,14 @@
 'use strict';
 import './modal.js'
 import { openModal } from './modal.js';
+import { timerWrapper, updateTimer } from './timeCount.js';
 
 const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');
-body.append(gameContainer)
+body.append(gameContainer);
+export let timer;
+
 
 export function startGame() {
  const puzzle = document.createElement('div');
@@ -75,13 +78,14 @@ indexArray.push(cell.getAttribute('data-index'))
 if(indexArray.includes('2') || indexArray.includes('3') ) {
 return false
 } else {
-openModal()
+const timeFinished = timerWrapper.textContent;
+clearInterval(timer);
+openModal(timeFinished);
 return true
 }
 }
 
 const leftClickHandler = (event) => {
-
 switch (event.target.getAttribute('data-index')) {
 case '2':
 event.target.setAttribute('data-index', '5');
@@ -111,7 +115,17 @@ event.target.classList.add('empty');
 
 }
 
+const startTimer = () => {
+     timer = setInterval(updateTimer, 1000);
+    gameContainer.removeEventListener('click', startTimer);
+
+}
+
+gameContainer.addEventListener('click', startTimer);
+
+
 gameField.addEventListener('click', leftClickHandler);
+
 
 
 const rightClickHandler = (event) => {

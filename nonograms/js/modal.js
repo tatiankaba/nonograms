@@ -12,7 +12,6 @@ modal.classList.add('modal');
 
 const inscriptionWrapper = document.createElement('div');
 
-inscriptionWrapper.textContent = 'Great! You have solved the nonogram!'
 
 modal.append(closeBtn)
 modal.append(inscriptionWrapper)
@@ -31,8 +30,10 @@ const closeModal = (event) => {
 closeBtn.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
-export function openModal() {
+export function openModal(timeFinished) {
     overlay.style.display = 'block';
     body.style.overflow = 'hidden';
+    inscriptionWrapper.textContent = `Great! You have solved the nonogram in ${timeFinished} !`
+
 }
 

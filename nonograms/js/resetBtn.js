@@ -1,4 +1,6 @@
-import { startGame, gameContainer } from './gameField.js';
+import { startGame, gameContainer , timer} from './gameField.js';
+import { resetTimer, timerWrapper, updateTimer } from './timeCount.js';
+
 
 
  
@@ -11,6 +13,8 @@ const clickHandler = () => {
     while (gameContainer.firstChild) {
         gameContainer.firstChild.remove(); 
     }
+    clearInterval(timer);
+    resetTimer();
     startGame()
 }
 
