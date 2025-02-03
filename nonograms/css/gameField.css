@@ -90,21 +90,26 @@ body.dark-theme .grid-cell.empty {
 }
 
 body.light-theme .grid-cell.empty {
-    background-color: var(--var-theme)
+    background-color: var(--var-theme);
+
 }
 
 body.light-theme .grid-cell.filled {
     background-color: white;
+    border: 0.5px solid black;
 }
 
 body.dark-theme .grid-cell.filled {
     background-color: black;
+    border: 0.5px solid white;
 }
 
 body.dark-theme .grid-cell.crossed {
     background: url(../icons/cross.png) no-repeat center center / cover, white;
+    border: 0.5px solid white;
 }
 
 body.light-theme .grid-cell.crossed {
     background: url(../icons/cross.png) no-repeat center center / cover, black;
+    border: 0.5px solid black;
 }

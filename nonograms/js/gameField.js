@@ -2,10 +2,14 @@
 import './modal.js'
 import { openModal } from './modal.js';
 
-
 const body = document.body;
+export const gameContainer = document.createElement('div');
+gameContainer.classList.add('gameContainer');
+body.append(gameContainer)
 
-export const puzzle = document.createElement('div');
+export function startGame() {
+ const puzzle = document.createElement('div');
+ gameContainer.append(puzzle)
 puzzle.classList.add('puzzle');
 
 const upperHints = document.createElement('div');
@@ -15,8 +19,7 @@ upperHints.classList.add('upper-hints');
 const sideHints = document.createElement('div');
 sideHints.classList.add('hints');
 sideHints.classList.add('side-hints');
-
-const gameField = document.createElement('div');
+ const gameField = document.createElement('div');
 gameField.classList.add('game-field');
 
 puzzle.append(upperHints, sideHints, gameField);
@@ -28,7 +31,7 @@ const upperHintsMap = [null,2,null,null,null,
 const sideHintsMap = [null,1,null,3,null,
     5,1,3,null,3];
 
-export function startGame() {
+
 
 const fieldMap = [0,0,2,0,0,
     0,2,2,2,0,
@@ -130,7 +133,6 @@ gameField.addEventListener('contextmenu', rightClickHandler);
 }
 
 
-startGame()
 
 
 

@@ -7,10 +7,11 @@ import './resetBtn.js'
 const body = document.body;
 
 import { header } from './header.js';
-import {puzzle} from './gameField.js'
+import {startGame, gameContainer} from './gameField.js'
 
 body.append(header);
-body.append(puzzle);
+body.append(gameContainer);
+startGame()
 
 
 

@@ -1,5 +1,4 @@
-import { startGame } from './gameField.js';
-import { puzzle } from './gameField.js';
+import { startGame, gameContainer } from './gameField.js';
 
 
  
@@ -9,7 +8,9 @@ resetBtn.classList.add('btn')
 resetBtn.textContent = 'reset the game'
 
 const clickHandler = () => {
-    body.removeChild(puzzle);
+    while (gameContainer.firstChild) {
+        gameContainer.firstChild.remove(); 
+    }
     startGame()
 }
 
