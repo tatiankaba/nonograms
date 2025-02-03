@@ -1,10 +1,13 @@
 'use strict';
 
-import './theme.js'
+import './theme.js';
 
-import {switcherLabel} from './theme.js'
 
-const header = document.createElement('header');
+import {switcherLabel} from './theme.js';
+import { resetBtn } from './resetBtn.js';
+
+
+export const header = document.createElement('header');
 header.classList.add('header');
 
 const body = document.body;
@@ -12,7 +15,8 @@ const logo = document.createElement('div');
 logo.classList.add('logo');
 logo.textContent = 'Nonogram';
 
-body.append(header);
+
 header.append(logo);
+header.append(resetBtn)
 header.append(switcherLabel);
 
