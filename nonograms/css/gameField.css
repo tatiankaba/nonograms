@@ -1,0 +1,110 @@
+:root {
+    --var-theme: white;
+    
+}
+
+.puzzle {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: 
+    ". upperHints"     
+    "sideHints gameField"; 
+    max-width: 500px;
+    min-height: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    gap: 2px;
+    border: 2px solid var(--var-theme);
+}
+
+.hints {
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.hint{
+    background-color: var(--var-theme);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-field {
+    display: grid;
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    grid-area: gameField;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+}
+
+.upper-hints {
+    grid-area: upperHints;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    column-gap: 0.5px;
+  
+}
+
+body.dark-theme .upper-hints, body.dark-theme .side-hints {
+    color:black
+}
+
+body.light-theme .upper-hints, body.light-theme .side-hints {
+    color:white
+}
+
+
+
+.side-hints {
+    grid-area: sideHints;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5,1fr);
+    text-align: right;
+    row-gap: 0.5px;
+}
+
+.grid-cell, .empty {
+    background-color: var(--var-theme);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+body.light-theme {
+    --var-theme: black;
+}
+
+body.dark-theme {
+    --var-theme: white;
+}
+
+body.dark-theme .grid-cell.empty {
+    background-color: var(--var-theme)
+}
+
+body.light-theme .grid-cell.empty {
+    background-color: var(--var-theme)
+}
+
+body.light-theme .grid-cell.filled {
+    background-color: white;
+}
+
+body.dark-theme .grid-cell.filled {
+    background-color: black;
+}
+
+body.dark-theme .grid-cell.crossed {
+    background: url(../icons/cross.png) no-repeat center center / cover, white;
+}
+
+body.light-theme .grid-cell.crossed {
+    background: url(../icons/cross.png) no-repeat center center / cover, black;
+}

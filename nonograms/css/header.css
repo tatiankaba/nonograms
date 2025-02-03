@@ -1,0 +1,22 @@
+
+
+.logo {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 1px solid var(--var-theme) ;
+    
+}
+
+body.dark-theme .header {
+    --var-theme: white;
+}
+
+body.light-theme .header {
+    --var-theme: black;
+}
