@@ -1,4 +1,6 @@
 'use strict';
+import './modal.js'
+import { openModal } from './modal.js';
 
 const body = document.body;
 
@@ -67,16 +69,20 @@ function isWon() {
     if(indexArray.includes('2') || indexArray.includes('3') ) {
         return false
     } else {
-        console.log('победа')
+        openModal()
+        console.log('gj,tlf')
         return true
     }
 }
 
 const leftClickHandler = (event) => {
 
+
+
     switch (event.target.getAttribute('data-index')) {
         case '2':
             event.target.setAttribute('data-index', '5');
+            isWon()
             break;
         case '0':
             event.target.setAttribute('data-index', '3');
@@ -85,7 +91,7 @@ const leftClickHandler = (event) => {
             event.target.setAttribute('data-index', '0');
             break;
         case '5':
-            event.target.setAttribute('data-index', '0');
+            event.target.setAttribute('data-index', '2');
             break;
     }
 
@@ -99,7 +105,7 @@ const leftClickHandler = (event) => {
         event.target.classList.remove('crossed');
         event.target.classList.add('empty');
     }
-    isWon()
+    
 }
 
 gameField.addEventListener('click', leftClickHandler);
