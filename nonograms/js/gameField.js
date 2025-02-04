@@ -11,7 +11,8 @@ body.append(gameContainer);
 let timer;
  function startTimer() {
     timer = setInterval(updateTimer, 1000);
-    gameContainer.removeEventListener('click', startTimer);
+    const gameField = document.querySelector('.game-field');
+    gameField.removeEventListener('click', startTimer);
 }
 export function stopTimer() {
     clearInterval(timer);
@@ -126,7 +127,7 @@ event.target.classList.add('empty');
 }
 
 
-gameContainer.addEventListener('click', startTimer);
+gameField.addEventListener('click', startTimer);
 
 
 gameField.addEventListener('click', leftClickHandler);
