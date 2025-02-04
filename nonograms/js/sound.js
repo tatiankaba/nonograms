@@ -34,4 +34,12 @@ soundBtn.addEventListener('click', ()=> {
     }
 });
 
+const winSound = new Audio('./sounds/win.mp3');
+sound.preload = 'auto';
+
+export function playWinSound() {
+    if(soundInput.checked) {
+        winSound.play()
+    }
+}
 

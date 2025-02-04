@@ -2,7 +2,7 @@
 import './modal.js'
 import { openModal } from './modal.js';
 import { timerWrapper, updateTimer } from './timeCount.js';
-import { playSound } from './sound.js';
+import { playSound, playWinSound } from './sound.js';
 
 const body = document.body;
 export const gameContainer = document.createElement('div');
@@ -87,8 +87,9 @@ if(indexArray.includes('2') || indexArray.includes('3') ) {
 return false
 } else {
 const timeFinished = timerWrapper.textContent;
-stopTimer() 
+stopTimer() ;
 openModal(timeFinished);
+playWinSound();
 return true
 }
 }
