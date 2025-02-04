@@ -17,9 +17,9 @@ export function updateTimer() {
     minutes++; 
   }
 
-  secondsExp = `${seconds  < 10 ? '0' : ''}  ${seconds}`;
-  minutesExp = `${minutes  < 10 ? '0' : ''}  ${minutes}`;
-  timerWrapper. textContent= `${minutesExp} : ${secondsExp}`
+  secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
+  minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
+  timerWrapper. textContent= `${minutesExp}:${secondsExp}`
 }
 
 export function resetTimer() {
