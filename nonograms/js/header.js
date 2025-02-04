@@ -6,6 +6,7 @@ import './theme.js';
 import {switcherLabel} from './theme.js';
 import { resetBtn } from './resetBtn.js';
 import { timerWrapper } from './timeCount.js';
+import { solutionBtn } from './solutionBtn.js';
 
 
 export const header = document.createElement('header');
@@ -19,6 +20,7 @@ logo.textContent = 'Nonogram';
 
 header.append(logo);
 header.append(resetBtn);
+header.append(solutionBtn);
 header.append(timerWrapper);
 header.append(switcherLabel);
 

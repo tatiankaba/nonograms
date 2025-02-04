@@ -7,7 +7,14 @@ const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');
 body.append(gameContainer);
-export let timer;
+let timer;
+ function startTimer() {
+    timer = setInterval(updateTimer, 1000);
+    gameContainer.removeEventListener('click', startTimer);
+}
+export function stopTimer() {
+    clearInterval(timer);
+}
 
 
 export function startGame() {
@@ -79,7 +86,7 @@ if(indexArray.includes('2') || indexArray.includes('3') ) {
 return false
 } else {
 const timeFinished = timerWrapper.textContent;
-clearInterval(timer);
+stopTimer() 
 openModal(timeFinished);
 return true
 }
@@ -115,11 +122,6 @@ event.target.classList.add('empty');
 
 }
 
-const startTimer = () => {
-     timer = setInterval(updateTimer, 1000);
-    gameContainer.removeEventListener('click', startTimer);
-
-}
 
 gameContainer.addEventListener('click', startTimer);
 

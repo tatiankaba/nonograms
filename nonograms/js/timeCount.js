@@ -1,4 +1,6 @@
 'use strict'
+import { stopTimer } from "./gameField.js";
+
 
 export const timerWrapper = document.createElement('div');
 timerWrapper.classList.add('time')
@@ -21,6 +23,7 @@ export function updateTimer() {
 }
 
 export function resetTimer() {
+  stopTimer();
   seconds = 0;
   minutes = 0;
   secondsExp = '00';
