@@ -2,6 +2,7 @@
 import './modal.js'
 import { openModal } from './modal.js';
 import { timerWrapper, updateTimer } from './timeCount.js';
+import { playSound } from './sound.js';
 
 const body = document.body;
 export const gameContainer = document.createElement('div');
@@ -93,6 +94,7 @@ return true
 }
 
 const leftClickHandler = (event) => {
+playSound()
 switch (event.target.getAttribute('data-index')) {
 case '2':
 event.target.setAttribute('data-index', '5');

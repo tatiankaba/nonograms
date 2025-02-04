@@ -1,0 +1,11 @@
+.sound-input {
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.sound-label {
+    display: block;
+    padding: 5px;
+    border: 1px solid black;
+}
