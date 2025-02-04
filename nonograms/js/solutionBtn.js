@@ -9,7 +9,15 @@ const clickHandler = () => {
     resetTimer();
     const values = Array.from(document.getElementsByClassName('grid-cell'));
     values.forEach((cell)=> {
-        cell.getAttribute('data-index') == '2' ? cell.classList.add('filled') : cell.classList.add('empty')
+        const index = cell.getAttribute('data-index');
+        if(index == 2) {
+            cell.classList.add('filled');
+            cell.classList.remove('crossed');
+        } else if (index == 3){
+            cell.classList.add('empty');
+            cell.classList.remove('filled');
+        }
+
     })
 }
 
