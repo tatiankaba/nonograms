@@ -7,7 +7,6 @@ import { playSound, playWinSound } from './sound.js';
 const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');
-body.append(gameContainer);
 let timer;
  function startTimer() {
     timer = setInterval(updateTimer, 1000);
@@ -18,8 +17,23 @@ export function stopTimer() {
     clearInterval(timer);
 }
 
+export const upperHintsMap = [null,2,null,null,null,
+    2,1,5,4,2];
 
-export function startGame() {
+export const sideHintsMap = [null,1,null,3,null,
+    5,1,3,null,3];
+
+
+
+export const fieldMap = [0,0,2,0,0,
+    0,2,2,2,0,
+    2,2,2,2,2,
+    2,0,2,2,2,
+    0,2,2,2,0,]
+
+
+
+export function startGame(fieldMap, sideHintsMap,upperHintsMap) {
  const puzzle = document.createElement('div');
  gameContainer.append(puzzle)
 puzzle.classList.add('puzzle');
@@ -35,23 +49,6 @@ sideHints.classList.add('side-hints');
 gameField.classList.add('game-field');
 
 puzzle.append(upperHints, sideHints, gameField);
-
-
-const upperHintsMap = [null,2,null,null,null,
-    2,1,5,4,2];
-
-const sideHintsMap = [null,1,null,3,null,
-    5,1,3,null,3];
-
-
-
-const fieldMap = [0,0,2,0,0,
-    0,2,2,2,0,
-    2,2,2,2,2,
-    2,0,2,2,2,
-    0,2,2,2,0,]
-
-
     
 fieldMap.forEach((index)=> {
 const gameCell = document.createElement('div');
