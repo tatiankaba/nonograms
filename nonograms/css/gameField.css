@@ -67,7 +67,6 @@ body.light-theme .upper-hints, body.light-theme .side-hints {
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(5,1fr);
     text-align: right;
-    row-gap: 0.5px;
 }
 
 .grid-cell, .empty {
@@ -75,6 +74,16 @@ body.light-theme .upper-hints, body.light-theme .side-hints {
     width: 100%;
     height: 100%;
     cursor: pointer;
+}
+
+body.dark-theme  .grid-cell{
+    border: 0.5px solid white;
+
+}
+
+body.light-theme  .grid-cell{
+    border: 0.5px solid black;
+
 }
 
 body.light-theme {
@@ -96,20 +105,19 @@ body.light-theme .grid-cell.empty {
 
 body.light-theme .grid-cell.filled {
     background-color: white;
-    border: 0.5px solid black;
 }
 
 body.dark-theme .grid-cell.filled {
     background-color: black;
-    border: 0.5px solid white;
 }
 
 body.dark-theme .grid-cell.crossed {
-    background: url(../icons/cross.png) no-repeat center center / cover, white;
-    border: 0.5px solid white;
+    background: url(../icons/cross.png) no-repeat center center, white;
+    background-size: contain;
+
 }
 
 body.light-theme .grid-cell.crossed {
-    background: url(../icons/cross.png) no-repeat center center / cover, black;
-    border: 0.5px solid black;
+    background: url(../icons/cross.png) no-repeat center center, black;
+    background-size: contain;
 }
