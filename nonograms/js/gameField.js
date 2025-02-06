@@ -3,6 +3,8 @@ import './modal.js'
 import { openModal } from './modal.js';
 import { timerWrapper, updateTimer } from './timeCount.js';
 import { playSound, playWinSound } from './sound.js';
+import { gameNameTitle } from './templates.js';
+
 
 const body = document.body;
 export const gameContainer = document.createElement('div');
@@ -17,23 +19,8 @@ export function stopTimer() {
     clearInterval(timer);
 }
 
-export const upperHintsMap = [null,2,null,null,null,
-    2,1,5,4,2];
 
-export const sideHintsMap = [null,1,null,3,null,
-    5,1,3,null,3];
-
-
-
-export const fieldMap = [0,0,2,0,0,
-    0,2,2,2,0,
-    2,2,2,2,2,
-    2,0,2,2,2,
-    0,2,2,2,0,]
-
-
-
-export function startGame(fieldMap, sideHintsMap,upperHintsMap) {
+export function startGame(obj) {
  const puzzle = document.createElement('div');
  gameContainer.append(puzzle)
 puzzle.classList.add('puzzle');
@@ -49,8 +36,10 @@ sideHints.classList.add('side-hints');
 gameField.classList.add('game-field');
 
 puzzle.append(upperHints, sideHints, gameField);
+
+gameNameTitle.textContent = obj.gameName;
     
-fieldMap.forEach((index)=> {
+obj.fieldMap.forEach((index)=> {
 const gameCell = document.createElement('div');
 gameCell.classList.add('grid-cell');
 gameCell.classList.add('empty');
@@ -59,7 +48,7 @@ gameField.append(gameCell);
 gameCell.setAttribute('data-index', index)
 })        
 
-upperHintsMap.forEach((digit)=> {
+obj.upperHintsMap.forEach((digit)=> {
 const gameCell = document.createElement('div');
 upperHints.append(gameCell);
 gameCell.classList.add('hint')
@@ -67,7 +56,7 @@ gameCell.textContent = digit;
 
 })
 
-sideHintsMap.forEach((digit)=> {
+obj.sideHintsMap.forEach((digit)=> {
 const gameCell = document.createElement('div');
 sideHints.append(gameCell);
 gameCell.classList.add('hint')

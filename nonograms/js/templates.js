@@ -1,10 +1,16 @@
 'use strict'
 
-import { startGame, gameContainer, upperHintsMap, sideHintsMap, fieldMap } from "./gameField.js";
+import { startGame, gameContainer} from "./gameField.js";
 import { resetTimer } from "./timeCount.js";
 
 export const templatesWrapper = document.createElement('div');
 templatesWrapper.classList.add('template-wrapper');
+
+export const gameNameTitleBlock = document.createElement('div');
+gameNameTitleBlock.classList.add('game-name-block');
+export const gameNameTitle = document.createElement('h1');
+gameNameTitle.textContent = 'figure'
+gameNameTitleBlock.append(gameNameTitle);
 
 const figureBtn = document.createElement('button');
 figureBtn.classList.add('btn');
@@ -36,6 +42,7 @@ function removePreviousGame() {
 }
 
 export const figure = {
+    gameName: "figure",
     upperHintsMap: [null,2,null,null,null,
         2,1,5,4,2],
     sideHintsMap: [null,1,null,3,null,
@@ -48,6 +55,7 @@ export const figure = {
 }
 
 export const figure2 = {
+    gameName: "figure 2",
     upperHintsMap: [null,null,null,2,null,
         1,2,4,2,2],
     sideHintsMap: [1,1,null,3,null,
@@ -60,6 +68,7 @@ export const figure2 = {
 }
 
 export const figure3 = {
+    gameName: "figure 3",
     upperHintsMap: [null,null,null,null,1,
                      4,3,1,1,3],
     sideHintsMap: [null,1,null,2,2,
@@ -72,6 +81,7 @@ export const figure3 = {
 }
 
 export const figure1 = {
+    gameName: "figure 1",
     upperHintsMap: [null,null,null,null,null,
                      3,3,1,2,4],
     sideHintsMap: [null,1,null,2,3,
@@ -84,6 +94,7 @@ export const figure1 = {
 }
 
 export const figure4 = {
+    gameName: "figure 4",
     upperHintsMap: [null,null,null,null,null,
                      3,1,4,2,3],
     sideHintsMap: [1,2,null,3,'1 1',
@@ -97,28 +108,28 @@ export const figure4 = {
 
 
 figureBtn.addEventListener('click', ()=> {
-    removePreviousGame() 
-    startGame(figure.fieldMap, figure.sideHintsMap, figure.upperHintsMap);
+    removePreviousGame();
+    startGame(figure);
 });
 
 figure1Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure1.fieldMap, figure1.sideHintsMap, figure1.upperHintsMap);
+    startGame(figure1);
 });
 
 figure2Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure2.fieldMap, figure2.sideHintsMap,figure2.upperHintsMap);
+    startGame(figure2);
 });
 
 figure3Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure3.fieldMap, figure3.sideHintsMap,figure3.upperHintsMap);
+    startGame(figure3);
 });
 
 figure4Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure4.fieldMap, figure4.sideHintsMap,figure4.upperHintsMap);
+    startGame(figure4);
 });
 
 

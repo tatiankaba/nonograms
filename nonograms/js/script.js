@@ -7,13 +7,14 @@ import './resetBtn.js'
 const body = document.body;
 
 import { header } from './header.js';
-import {startGame, gameContainer, upperHintsMap, sideHintsMap,fieldMap} from './gameField.js';
-import { templatesWrapper } from './templates.js'
+import {startGame, gameContainer} from './gameField.js';
+import { templatesWrapper, gameNameTitleBlock, figure } from './templates.js'
 
 body.append(header);
-body.append(templatesWrapper)
+body.append(templatesWrapper);
+body.append(gameNameTitleBlock)
 body.append(gameContainer);
-startGame(fieldMap, sideHintsMap,upperHintsMap)
+startGame(figure)
 
 
 

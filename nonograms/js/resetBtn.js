@@ -1,5 +1,6 @@
 import { startGame, gameContainer } from './gameField.js';
 import { resetTimer } from './timeCount.js';
+import { figure, figure1, figure2,figure3,figure4, gameNameTitle } from './templates.js';
 
 
  
@@ -13,7 +14,14 @@ const clickHandler = () => {
         gameContainer.firstChild.remove(); 
     }
     resetTimer();
-    startGame()
+    const gameName = gameNameTitle.textContent;
+    const gameTemplates = {figure, figure1, figure2, figure3, figure4};
+    for (let gameKey in gameTemplates) {
+        const game = gameTemplates[gameKey];
+        if (game.gameName === gameName) {
+               startGame(game)
+        }
+    }
 }
 
 resetBtn.addEventListener('click', clickHandler)
