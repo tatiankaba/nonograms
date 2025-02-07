@@ -1,5 +1,5 @@
 'use strict'
-import { startGame ,gameContainer} from "./gameField.js";
+import { startGame ,gameContainer,stopTimer} from "./gameField.js";
 import { updateTimeFromLocalStorage } from "./timeCount.js";
 
 export const continueBtn = document.createElement('button');
@@ -12,7 +12,7 @@ function retrieveLocalStorageData() {
 };
 
 function launchSavedGame() {
-
+    stopTimer() 
         while (gameContainer.firstChild) {
             gameContainer.firstChild.remove(); 
         }
