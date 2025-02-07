@@ -1,16 +1,17 @@
 'use strict';
 import './modal.js'
 import { openModal } from './modal.js';
-import { timerWrapper, updateTimer } from './timeCount.js';
+import { timerWrapper, updateTimer, minutes, seconds } from './timeCount.js';
 import { playSound, playWinSound } from './sound.js';
 import { gameNameTitle } from './templates.js';
+
 
 
 const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');
 let timer;
- function startTimer() {
+export function startTimer() {
     timer = setInterval(updateTimer, 1000);
     const gameField = document.querySelector('.game-field');
     gameField.removeEventListener('click', startTimer);
@@ -21,6 +22,9 @@ export function stopTimer() {
 
 
 export function startGame(obj) {
+
+
+localStorage.removeItem('currentGame')
  const puzzle = document.createElement('div');
  gameContainer.append(puzzle)
 puzzle.classList.add('puzzle');
@@ -112,11 +116,14 @@ event.target.classList.add('empty');
 
 }
 
+gameField.addEventListener('click', leftClickHandler);
 
 gameField.addEventListener('click', startTimer);
+if(minutes > 0 || seconds > 0) {
+    startTimer()
+}
 
 
-gameField.addEventListener('click', leftClickHandler);
 
 
 
@@ -133,6 +140,8 @@ event.target.classList.remove('crossed');
 event.target.classList.add('empty');
 }
 }
+
+localStorage.setItem('currentGame', JSON.stringify(obj));
 
 gameField.addEventListener('contextmenu', rightClickHandler);
 

@@ -8,7 +8,7 @@ export let seconds = 0;
 export let minutes = 0; 
 let secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
 let minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
-timerWrapper. textContent = `${minutesExp} : ${secondsExp}`;
+ timerWrapper. textContent = `${minutesExp} : ${secondsExp}`;
 
 export function updateTimer() {
   seconds++; 
@@ -16,18 +16,25 @@ export function updateTimer() {
     seconds = 0; 
     minutes++; 
   }
-
   secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
   minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
   timerWrapper. textContent= `${minutesExp}:${secondsExp}`
 }
 
+export function updateTimeFromLocalStorage() {
+  minutes = JSON.parse(localStorage.getItem('savedGame')).minutes;
+  seconds = JSON.parse(localStorage.getItem('savedGame')).seconds;
+  secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
+  minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
+  timerWrapper. textContent= `${minutesExp} : ${secondsExp}`
+}
+
 export function resetTimer() {
-  stopTimer();
-  seconds = 0;
   minutes = 0;
-  secondsExp = '00';
-  minutesExp = '00';
+  seconds = 0;
+  stopTimer();
+  secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
+  minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
   timerWrapper. textContent= `${minutesExp} : ${secondsExp}`
 
 }

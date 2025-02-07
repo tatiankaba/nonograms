@@ -8,6 +8,8 @@ import { resetBtn } from './resetBtn.js';
 import { timerWrapper } from './timeCount.js';
 import { solutionBtn } from './solutionBtn.js';
 import { soundBtn } from './sound.js';
+import { saveBtn } from './saveGameBtn.js';
+import { continueBtn } from './continueBtn.js';
 
 
 export const header = document.createElement('header');
@@ -23,6 +25,8 @@ header.append(logo);
 header.append(soundBtn);
 header.append(resetBtn);
 header.append(solutionBtn);
+header.append(saveBtn);
+header.append(continueBtn);
 header.append(timerWrapper);
 header.append(switcherLabel);
 
