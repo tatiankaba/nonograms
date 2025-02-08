@@ -3,13 +3,15 @@ import './header.js'
 import './gameField.js'
 import './modal.js'
 import './resetBtn.js'
+import { header } from './header.js';
+import {startGame, gameContainer} from './gameField.js';
+import { templatesWrapper, gameNameTitleBlock, figure } from './templates.js';
+import { logo } from './logo.js'
 
 const body = document.body;
 
-import { header } from './header.js';
-import {startGame, gameContainer} from './gameField.js';
-import { templatesWrapper, gameNameTitleBlock, figure } from './templates.js'
 
+body.append(logo)
 body.append(header);
 body.append(templatesWrapper);
 body.append(gameNameTitleBlock)

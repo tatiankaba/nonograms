@@ -10,3 +10,7 @@
 .game-name-block {
     text-align: center;
 }
+
+body.light-theme .game-name-block {
+    color: #453e3f;
+}

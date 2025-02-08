@@ -93,17 +93,3 @@ body.light-theme {
     border-radius: 50%;
   }
 
-
-  @media screen and (max-width: 868px) {
-    .switch:after {
-
-      content: "";
-
-    }
-    
-    .light:after {
-
-      content: "";
-
-    }
-  }

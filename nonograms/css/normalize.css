@@ -252,6 +252,8 @@
 
   button {
     outline: none;
+    all: unset;
+
   }
   
   /**

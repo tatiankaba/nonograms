@@ -16,6 +16,12 @@
     margin-top: 20px;
     gap: 2px;
     border: 2px solid var(--var-theme);
+    padding: 4px;
+}
+
+body.light-theme .puzzle {
+    border: 2px solid #785e2b;
+
 }
 
 .hints {
@@ -28,6 +34,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body.light-theme .hint {
+    background-color: #d7854b;
+    color: #e6de34;
 }
 
 .game-field {
@@ -56,7 +67,8 @@ body.dark-theme .upper-hints, body.dark-theme .side-hints {
 }
 
 body.light-theme .upper-hints, body.light-theme .side-hints {
-    color:white
+    background-color:#e6de34;
+
 }
 
 
@@ -86,7 +98,7 @@ body.light-theme  .grid-cell{
 }
 
 body.light-theme {
-    --var-theme: black;
+    --var-theme: #ff7995;;
 }
 
 body.dark-theme {
@@ -98,12 +110,12 @@ body.dark-theme .grid-cell.empty {
 }
 
 body.light-theme .grid-cell.empty {
-    background-color: var(--var-theme);
+    background-color: #f2cb9b;
 
 }
 
 body.light-theme .grid-cell.filled {
-    background-color: white;
+    background-color:#104b4b;
 }
 
 body.dark-theme .grid-cell.filled {
@@ -117,6 +129,6 @@ body.dark-theme .grid-cell.crossed {
 }
 
 body.light-theme .grid-cell.crossed {
-    background: url(../icons/cross.png) no-repeat center center, black;
+    background: url(../icons/cross.png) no-repeat center center,#f2cb9b;
     background-size: contain;
 }

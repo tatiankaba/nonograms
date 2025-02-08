@@ -9,8 +9,9 @@
 .sound-label {
     position: relative;
     text-align: center;
-    display: block;
-    border: 1px solid black;
+    min-width: 100px;
+    min-height: 40px;
+    border: 1px solid #ff7995;
     display: flex;
     justify-content: center;
     align-items: center;
