@@ -1,0 +1,11 @@
+:root {
+    --var-theme: white;
+    --var-light-theme-field-color: #f2e19d;
+    --var-hints-light-theme-background-color: #dc8536;
+    --var-hints-light-theme-color: #e6de34;
+    --var-pink-color: #ff7995;
+    --var-green-cells-color: #104b4b;
+    --var-pink-dark-theme-color: #e33955;
+    --var-light-theme-puzzle-border-color: #785e2b;
+    --var-light-theme-template-color: #453e3f;
+}

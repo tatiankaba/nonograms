@@ -1,26 +1,4 @@
 
-
-.logo {
-    font-size: 30px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-body.dark-theme .logo {
-    color: #ff7995;
-}
-
-.girl-doll-wrapper {
-    min-width: 50px;
-    min-height: 50px;
-    background: url(../icons/girlDoll.png) center center / contain no-repeat;
-}
-
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -28,15 +6,16 @@ body.dark-theme .logo {
     justify-content: center;
     gap: 2px;
     padding: 10px 45px;
-    border-bottom: 3px solid var(--var-theme) ;
+    border-bottom: 3px solid var(--var-pink-color) ;
     
 }
 
-body.dark-theme .header {
-    --var-theme: white;
-}
 
 body.light-theme .logo {
-    --var-theme:#453e3f;
-    color: #e33955;
+    color: var(--var-pink-dark-theme-color);
+}
+
+body.dark-theme .header {
+    border-bottom: 3px solid var(--var-theme) ;
+
 }

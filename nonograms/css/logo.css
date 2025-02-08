@@ -1,0 +1,23 @@
+
+
+.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+body.dark-theme .logo {
+    color: var(--var-pink-dark-theme-color);
+}
+
+.girl-doll-wrapper {
+    min-width: 40px;
+    min-height: 40px;
+    background: url(../icons/girlDoll.png) center center / contain no-repeat;
+}

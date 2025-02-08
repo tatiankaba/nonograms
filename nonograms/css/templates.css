@@ -12,5 +12,5 @@
 }
 
 body.light-theme .game-name-block {
-    color: #453e3f;
+    color: var(--var-light-theme-template-color);
 }

@@ -3,9 +3,11 @@
 @import 'header.css';
 @import 'gameField.css';
 @import 'modal.css';
-@import 'time.css';
 @import 'sound.css';
 @import 'templates.css';
+@import 'logo.css';
+@import 'timeBlock.css';
+@import 'root.css';
 
 
 body {

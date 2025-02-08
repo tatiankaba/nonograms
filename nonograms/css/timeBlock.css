@@ -1,0 +1,18 @@
+
+.time {
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: white;  
+    font-weight: 900;  
+    border: 
+}
+
+.time {
+    color: #ba8975; 
+    max-width: 100px;
+    margin: 0 auto;
+    background-color: #40525d;
+    border: 5px solid #dbdace;
+}
+

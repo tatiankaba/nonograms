@@ -2,6 +2,10 @@
 import { stopTimer } from "./gameField.js";
 
 
+export const timeBlock  = document.createElement('div');
+timeBlock.classList.add('time-block');
+
+
 export const timerWrapper = document.createElement('div');
 timerWrapper.classList.add('time')
 export let seconds = 0; 
@@ -9,6 +13,8 @@ export let minutes = 0;
 let secondsExp = `${seconds  < 10 ? '0' : ''}${seconds}`;
 let minutesExp = `${minutes  < 10 ? '0' : ''}${minutes}`;
  timerWrapper. textContent = `${minutesExp}:${secondsExp}`;
+
+ timeBlock.append(timerWrapper);
 
 export function updateTimer() {
   seconds++; 

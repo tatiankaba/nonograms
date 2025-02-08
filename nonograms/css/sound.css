@@ -11,7 +11,7 @@
     text-align: center;
     min-width: 100px;
     min-height: 40px;
-    border: 1px solid #ff7995;
+    border: 1px solid var(--var-pink-color);
     display: flex;
     justify-content: center;
     align-items: center;

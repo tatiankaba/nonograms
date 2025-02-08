@@ -9,24 +9,24 @@
     transition: background-color 0.5s;
     text-align: center;
     padding: 5px;
-    border: 1px solid #ff7995;
+    border: 1px solid var(--var-pink-color);
     color: #453e3f;
 
 }
 
 .btn:hover {
- background-color: #ff7995;
+ background-color: var(--var-pink-color);
  transform: background-color;
 }
 
 body.light-theme .btn {
-    border: 1px solid #ff7995;
+    border: 1px solid var(--var-pink-color);
     color: #453e3f;
 }
 
 
 body.light-theme .templateBtn {
-    border-color: #453e3f;
-    color: #453e3f;
+    border-color:var(--var-light-theme-template-color);
+    color:var(--var-light-theme-template-color);
 }
 
