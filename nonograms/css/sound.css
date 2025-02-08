@@ -2,10 +2,16 @@
     display: block;
     width: 0;
     height: 0;
+    opacity: 0;
+    position: absolute;
 }
 
 .sound-label {
+    position: relative;
+    text-align: center;
     display: block;
-    padding: 5px;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

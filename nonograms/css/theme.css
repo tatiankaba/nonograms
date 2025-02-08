@@ -39,7 +39,7 @@ body.light-theme {
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   .slider:before {
     position: absolute;
     content: "";
@@ -56,7 +56,7 @@ body.light-theme {
     position: absolute;
     content: "Dark";
     font-size: 20px;
-    right: 65px;
+    left: 65px;
     top: 8px;
     color: var(--var-white-color);
   }
@@ -65,7 +65,8 @@ body.light-theme {
     position: absolute;
     content: "Light";
     font-size: 20px;
-    right: 65px;
+    display: block;
+    left: 65px;
     top: 8px;
     color: var(--var-black-color);
   }
