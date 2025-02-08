@@ -37,3 +37,9 @@ export function openModal(timeFinished) {
 
 }
 
+export function openContinueModal(message) {
+    overlay.style.display = 'block';
+    body.style.overflow = 'hidden';
+    inscriptionWrapper.textContent = 'No saved games'
+}
+

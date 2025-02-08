@@ -1,6 +1,7 @@
 'use strict'
 import { startGame ,gameContainer,stopTimer} from "./gameField.js";
 import { updateTimeFromLocalStorage } from "./timeCount.js";
+import { openContinueModal } from "./modal.js";
 
 export const continueBtn = document.createElement('button');
 continueBtn.classList.add('btn');
@@ -12,7 +13,8 @@ function retrieveLocalStorageData() {
 };
 
 function launchSavedGame() {
-    stopTimer() 
+    if(localStorage.getItem('savedGame')) {
+        stopTimer() 
         while (gameContainer.firstChild) {
             gameContainer.firstChild.remove(); 
         }
@@ -30,6 +32,10 @@ function launchSavedGame() {
         gameFieldCells[i].setAttribute('data-index',dataIndexArray[i]);
         console.log(...classArray)
     }
+    } else {
+        openContinueModal()
+    }
+   
 }
 
 continueBtn.addEventListener('click', launchSavedGame)
