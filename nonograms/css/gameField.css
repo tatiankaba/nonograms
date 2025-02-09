@@ -1,7 +1,7 @@
 
 .puzzle {
     display: grid;
-    grid-template-columns: minmax(5%, auto)  minmax(50%, auto);
+    grid-template-columns: minmax(5%, auto)  repeat(50%, auto);
     grid-template-rows: minmax(10%, auto)  minmax(50%, 1fr);
     grid-template-areas: 
     ". upperHints  "     
@@ -32,7 +32,6 @@ body.light-theme .puzzle {
     max-width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
-    /* padding-bottom: 3px; */
 }
 
 .row {
@@ -48,10 +47,6 @@ body.light-theme .puzzle {
     cursor: pointer;
 }
 
-body.dark-theme  .grid-cell {
-    border: 0.5px solid white;
-
-}
 
 body.light-theme  .grid-cell{
     border: 0.5px solid var(--var-hints-light-theme-background-color);
@@ -124,16 +119,58 @@ body.dark-theme .upper-hints, body.dark-theme .side-hints {
     grid-area: sideHints;
     display: flex;
     text-align: right;
-    row-gap: 0.5px;
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
+    gap: 0.5px;
 }
 
 .side-hints .hint {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: auto;
     align-items: center;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+body.dark-theme .row:nth-child(5n + 5), div.side-hints div.hint:nth-child(5n) {
+    border-bottom: 2px solid black;
+}
+
+body.dark-theme .row:last-child, div.side-hints div.hint:last-child {
+    border-bottom: none;
+}
+
+
+body.dark-theme  .upper-hints .hint:nth-child(5n), div.grid-cell:nth-child(5n) {
+    border-right: 2px solid black;
+}
+
+body.light-theme .row:nth-child(5n + 5), .side-hints div.hint:nth-child(5n) {
+    border-bottom: 2px solid var(--var-light-theme-puzzle-border-color);
+}
+
+body.light-theme .row:last-child, div.side-hints div.hint:last-child {
+    border-bottom: none;
+}
+
+body.light-theme  .upper-hints div.hint:nth-child(5n), div.grid-cell:nth-child(5n) {
+    border-right: 2px solid var(--var-light-theme-puzzle-border-color);
+}
+
+body.dark-theme  .upper-hints .hint:nth-child(5n), div.grid-cell:nth-child(5n) {
+    border-right: 2px solid black;
+}
+
+body.dark-theme  .upper-hints .hint:last-child, div.grid-cell:last-child {
+    border-right: none;
+}
+
+body.light-theme .row:last-child, .side-hints div.hint:nth-child(5n) {
+    border-bottom: none;
+}
+
+body.light-theme  .upper-hints div.hint:last-child, div.grid-cell:last-child {
+    border-right: none;
 }
