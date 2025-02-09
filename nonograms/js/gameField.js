@@ -7,6 +7,7 @@ import { gameNameTitle } from './templates.js';
 
 
 
+
 const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');

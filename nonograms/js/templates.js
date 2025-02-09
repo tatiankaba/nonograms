@@ -2,6 +2,7 @@
 
 import { startGame, gameContainer} from "./gameField.js";
 import { resetTimer } from "./timeCount.js";
+import { templateObj } from "./templateObj.js";
 
 export const templatesWrapper = document.createElement('div');
 templatesWrapper.classList.add('template-wrapper');
@@ -46,88 +47,29 @@ function removePreviousGame() {
     }
 }
 
-export const figure = {
-    gameName: "figure",
-    upperHintsMap: [[2],[[2],[1]],[5],
-[4],[2]],
-    sideHintsMap: [[1],[3],[5],[[1],[3]],[3]],
-    fieldMap: [0,0,2,0,0,
-        0,2,2,2,0,
-        2,2,2,2,2,
-        2,0,2,2,2,
-        0,2,2,2,0,]
-}
-
-
-export const figure2 = {
-    gameName: "figure 2",
-    upperHintsMap: [[1],[2],[4],[[2],[2]],[2]],
-    sideHintsMap: [[[1],[1]],[3],[1],[[1],[3]],[3]],
-    fieldMap:[0,2,0,2,0,
-        0,2,2,2,0,
-        0,0,2,0,0,
-        2,0,2,2,2,
-        0,0,2,2,2]
-}
-
-export const figure3 = {
-    gameName: "figure 3",
-    upperHintsMap: [[4],[3],[1],[1],[[1],[3]]],
-    sideHintsMap: [[1],[2] ,[[2],[1]] ,[[3],[1]] ,[[1],[2]]],
-    fieldMap:[0,0,0,0,2,
-        2,2,0,0,0,
-        2,2,0,0,2,
-        2,2,2,0,2,
-        2,0,0,2,2]
-}
-
-export const figure1 = {
-    gameName: "figure 1",
-    upperHintsMap:  [[3],[3],[1],[2],[4]],
-    sideHintsMap: [[1],[2],[[3], [1]],[[2],[1]],[[2],[1]]],
-    fieldMap:[0,0,0,2,0,
-        0,0,0,2,2,
-        2,2,2,0,2,
-        2,2,0,0,2,
-        2,2,0,0,2]
-}
-
-export const figure4 = {
-    gameName: "figure 4",
-    upperHintsMap: [[3],[1],[4],[2],[3]],
-    sideHintsMap: [[[1],[2]],[3],[[1], [1],
-        [1]],[[1],[1]],[[1],[1]]],
-    fieldMap:[0,2,0,2,2,
-        0,0,2,2,2,
-        2,0,2,0,2,
-        2,0,2,0,0,
-        2,0,2,0,0]
-}
-
-
 figureBtn.addEventListener('click', ()=> {
     removePreviousGame();
-    startGame(figure);
+    startGame(templateObj.simple.figure);
 });
 
 figure1Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure1);
+    startGame(templateObj.simple.figure1);
 });
 
 figure2Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure2);
+    startGame(templateObj.simple.figure2);
 });
 
 figure3Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure3);
+    startGame(templateObj.simple.figure3);
 });
 
 figure4Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(figure4);
+    startGame(templateObj.simple.figure4);
 });
 
 

@@ -5,9 +5,10 @@ import './modal.js'
 import './resetBtn.js'
 import { header } from './header.js';
 import {startGame, gameContainer} from './gameField.js';
-import { templatesWrapper, gameNameTitleBlock, figure } from './templates.js';
+import { templatesWrapper, gameNameTitleBlock} from './templates.js';
 import { logo } from './logo.js';
-import { timeBlock } from './timeCount.js'
+import { timeBlock } from './timeCount.js';
+import { templateObj } from './templateObj.js'
 
 const body = document.body;
 
@@ -18,7 +19,7 @@ body.append(header);
 body.append(templatesWrapper);
 body.append(gameNameTitleBlock)
 body.append(gameContainer);
-startGame(figure)
+startGame(templateObj.simple.figure)
 
 
 

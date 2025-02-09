@@ -1,6 +1,7 @@
 import { startGame, gameContainer } from './gameField.js';
 import { resetTimer } from './timeCount.js';
-import { figure, figure1, figure2,figure3,figure4, gameNameTitle } from './templates.js';
+import { gameNameTitle } from './templates.js';
+import { templateObj } from './templateObj.js';
 
 
  
@@ -15,11 +16,11 @@ const clickHandler = () => {
     }
     resetTimer();
     const gameName = gameNameTitle.textContent;
-    const gameTemplates = {figure, figure1, figure2, figure3, figure4};
+    const gameTemplates = {...templateObj.simple};
     for (let gameKey in gameTemplates) {
         const game = gameTemplates[gameKey];
         if (game.gameName === gameName) {
-               startGame(game)
+               startGame(templateObj.simple[gameName])
         }
     }
 }

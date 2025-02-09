@@ -30,7 +30,6 @@ function launchSavedGame() {
             gameFieldCells[i].classList.add(...classArray[i].split(' ').map(className =>  className.trim()));
         }
         gameFieldCells[i].setAttribute('data-index',dataIndexArray[i]);
-        console.log(...classArray)
     }
     } else {
         openContinueModal()
