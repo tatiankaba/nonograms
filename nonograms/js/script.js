@@ -19,7 +19,7 @@ body.append(header);
 body.append(templatesWrapper);
 body.append(gameNameTitleBlock)
 body.append(gameContainer);
-startGame(templateObj.simple.figure)
+startGame(templateObj.medium.postcard)
 
 
 
