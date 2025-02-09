@@ -1,15 +1,13 @@
 
 .puzzle {
     display: grid;
-    grid-template-columns: minmax(50px, auto)  minmax(450px, auto);
-    grid-template-rows: minmax(50px, auto)  minmax(450px, auto);
+    grid-template-columns: minmax(10%, auto)  minmax(50%, 1fr);
+    grid-template-rows: minmax(10%, auto)  minmax(50%, 1fr);
     grid-template-areas: 
     ". upperHints  "     
     "sideHints gameField"; 
     height:auto;
-    width: auto;
-    max-width: fit-content; 
-    max-height: fit-content; 
+    max-width: 500px;
     margin: 0 auto;
     margin-top: 20px;
     gap: 2px;
@@ -49,13 +47,22 @@ body.light-theme .hint {
 }
 
 .game-field {
-    display: grid;
-    width: 100%;
+    display: flex;
+    max-width: 100%;
     height: 100%;
     grid-area: gameField;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
     gap: 1px;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1px;
+    flex-shrink: 1;
+    
 }
 
 .upper-hints {
@@ -122,3 +129,10 @@ body.light-theme .grid-cell.crossed {
     background-size: contain;
 }
 
+.grid-cell {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+}

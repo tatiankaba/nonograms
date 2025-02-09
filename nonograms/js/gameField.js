@@ -46,13 +46,18 @@ puzzle.append(upperHints, sideHints, gameField);
 
 gameNameTitle.textContent = obj.gameName;
     
-obj.fieldMap.forEach((index)=> {
-const gameCell = document.createElement('div');
-gameCell.classList.add('grid-cell');
-gameCell.classList.add('empty');
+obj.fieldMap.forEach((arr)=> {
+    const row = document.createElement('div');
+    row.classList.add('row');
+    gameField.append(row);
+    arr.forEach(((index)=> {
+    const gameCell = document.createElement('div');
+    gameCell.classList.add('grid-cell');
+    gameCell.classList.add('empty');
+    gameCell.setAttribute('data-index', index)
+    row.append(gameCell);
+    }))
 
-gameField.append(gameCell);
-gameCell.setAttribute('data-index', index)
 })     
 
 function addHintsToPuzzle(gameCell, digit) {
