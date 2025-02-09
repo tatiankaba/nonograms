@@ -10,6 +10,7 @@ import { gameNameTitle } from './templates.js';
 const body = document.body;
 export const gameContainer = document.createElement('div');
 gameContainer.classList.add('gameContainer');
+
 let timer;
 export function startTimer() {
     timer = setInterval(updateTimer, 1000);
@@ -24,7 +25,8 @@ export function stopTimer() {
 export function startGame(obj) {
 
 
-localStorage.removeItem('currentGame')
+localStorage.removeItem('currentGame');
+
  const puzzle = document.createElement('div');
  gameContainer.append(puzzle)
 puzzle.classList.add('puzzle');
@@ -50,22 +52,32 @@ gameCell.classList.add('empty');
 
 gameField.append(gameCell);
 gameCell.setAttribute('data-index', index)
-})        
+})     
+
+function addHintsToPuzzle(gameCell, digit) {
+    if(digit.length > 0) {
+        digit.forEach((num)=> {
+            const additionalRow = document.createElement('div');
+            additionalRow.textContent = num;
+            gameCell.append(additionalRow);
+        })
+    } else {
+        gameCell.textContent = digit;
+    }
+}
 
 obj.upperHintsMap.forEach((digit)=> {
 const gameCell = document.createElement('div');
 upperHints.append(gameCell);
-gameCell.classList.add('hint')
-gameCell.textContent = digit;
-
+gameCell.classList.add('hint');
+addHintsToPuzzle(gameCell, digit)
 })
 
 obj.sideHintsMap.forEach((digit)=> {
 const gameCell = document.createElement('div');
 sideHints.append(gameCell);
-gameCell.classList.add('hint')
-gameCell.textContent = digit;
-
+gameCell.classList.add('hint');
+addHintsToPuzzle(gameCell, digit)
 })
 
 function isWon() {

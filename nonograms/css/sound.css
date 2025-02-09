@@ -10,7 +10,7 @@
     position: relative;
     text-align: center;
     min-width: 100px;
-    min-height: 40px;
+    min-height: 20px;
     border: 1px solid var(--var-pink-color);
     display: flex;
     justify-content: center;

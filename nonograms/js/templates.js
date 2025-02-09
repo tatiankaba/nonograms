@@ -48,10 +48,9 @@ function removePreviousGame() {
 
 export const figure = {
     gameName: "figure",
-    upperHintsMap: [null,2,null,null,null,
-        2,1,5,4,2],
-    sideHintsMap: [null,1,null,3,null,
-        5,1,3,null,3],
+    upperHintsMap: [[2],[[2],[1]],[5],
+[4],[2]],
+    sideHintsMap: [[1],[3],[5],[[1],[3]],[3]],
     fieldMap: [0,0,2,0,0,
         0,2,2,2,0,
         2,2,2,2,2,
@@ -59,12 +58,11 @@ export const figure = {
         0,2,2,2,0,]
 }
 
+
 export const figure2 = {
     gameName: "figure 2",
-    upperHintsMap: [null,null,null,2,null,
-        1,2,4,2,2],
-    sideHintsMap: [1,1,null,3,null,
-        1,1,3,null,3],
+    upperHintsMap: [[1],[2],[4],[[2],[2]],[2]],
+    sideHintsMap: [[[1],[1]],[3],[1],[[1],[3]],[3]],
     fieldMap:[0,2,0,2,0,
         0,2,2,2,0,
         0,0,2,0,0,
@@ -74,10 +72,8 @@ export const figure2 = {
 
 export const figure3 = {
     gameName: "figure 3",
-    upperHintsMap: [null,null,null,null,1,
-                     4,3,1,1,3],
-    sideHintsMap: [null,1,null,2,2,
-        1,3,1,1,2],
+    upperHintsMap: [[4],[3],[1],[1],[[1],[3]]],
+    sideHintsMap: [[1],[2] ,[[2],[1]] ,[[3],[1]] ,[[1],[2]]],
     fieldMap:[0,0,0,0,2,
         2,2,0,0,0,
         2,2,0,0,2,
@@ -87,10 +83,8 @@ export const figure3 = {
 
 export const figure1 = {
     gameName: "figure 1",
-    upperHintsMap: [null,null,null,null,null,
-                     3,3,1,2,4],
-    sideHintsMap: [null,1,null,2,3,
-        1,2,1,2,1],
+    upperHintsMap:  [[3],[3],[1],[2],[4]],
+    sideHintsMap: [[1],[2],[[3], [1]],[[2],[1]],[[2],[1]]],
     fieldMap:[0,0,0,2,0,
         0,0,0,2,2,
         2,2,2,0,2,
@@ -100,10 +94,9 @@ export const figure1 = {
 
 export const figure4 = {
     gameName: "figure 4",
-    upperHintsMap: [null,null,null,null,null,
-                     3,1,4,2,3],
-    sideHintsMap: [1,2,null,3,'1 1',
-        1,1,1,1,1],
+    upperHintsMap: [[3],[1],[4],[2],[3]],
+    sideHintsMap: [[[1],[2]],[3],[[1], [1],
+        [1]],[[1],[1]],[[1],[1]]],
     fieldMap:[0,2,0,2,2,
         0,0,2,2,2,
         2,0,2,0,2,
