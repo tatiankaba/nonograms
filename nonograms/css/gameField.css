@@ -1,8 +1,8 @@
 
 .puzzle {
     display: grid;
-    grid-template-columns: minmax(5%, auto)  repeat(50%, auto);
-    grid-template-rows: minmax(10%, auto)  minmax(50%, 1fr);
+    grid-template-columns: minmax(5%, auto)  minmax(50%, 1fr);
+    grid-template-rows: minmax(5%, auto)  minmax(50%, 1fr);
     grid-template-areas: 
     ". upperHints  "     
     "sideHints gameField"; 
@@ -64,6 +64,7 @@ body.light-theme .grid-cell.filled {
 
 body.dark-theme .grid-cell.filled {
     background-color: black;
+    border: 0.5px solid white;
 }
 
 body.dark-theme .grid-cell.crossed {
