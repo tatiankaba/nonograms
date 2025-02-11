@@ -1,7 +1,6 @@
 "use strict";
 
 export const templateObj = {
-  'simple': {
     "figure": {
       "gameName": "figure",
       "upperHintsMap": [[2], [[2], [1]], [5], [4], [2]],
@@ -62,8 +61,6 @@ export const templateObj = {
         [2, 0, 2, 0, 0]
       ],
     },
-  },
-  "medium": {
     "postcard": {
         gameName: "postcard",
         upperHintsMap:[[10], [[1], [1]], [[1], [1],[1], [1],[1]], [[1], [1],[1], [1],[1]], [[1], [1],[1], [1],[1]], [[1],[1]],[[1],[1]],[[1],[1],[1]],[[1],[1]],[10]],
@@ -142,8 +139,8 @@ export const templateObj = {
     [2,2,2,2,0,0,0,2,2,2],
     [2,2,2,2,2,2,2,2,2,2]]
   }
-},
-};
+}
+
 
 
 

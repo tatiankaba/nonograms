@@ -15,13 +15,12 @@ const clickHandler = () => {
     }
     resetTimer();
     let gameName = gameNameTitle.textContent;
-    const gameTemplates = {...templateObj.simple};
+    const gameTemplates = {...templateObj};
     for (let gameKey in gameTemplates) {
         const game = gameTemplates[gameKey];
         if (game.gameName === gameName) {
             gameName = gameName.split(' ').join('')
-            console.log(templateObj.simple[gameName]);
-            startGame(templateObj.simple[gameName]);
+            startGame(templateObj[gameName]);
         }
     }
 }

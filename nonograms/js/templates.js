@@ -57,27 +57,27 @@ function removePreviousGame() {
 
 figureBtn.addEventListener('click', ()=> {
     removePreviousGame();
-    startGame(templateObj.simple.figure);
+    startGame(templateObj.figure);
 });
 
 figure1Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.simple.figure1);
+    startGame(templateObj.figure1);
 });
 
 figure2Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.simple.figure2);
+    startGame(templateObj.figure2);
 });
 
 figure3Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.simple.figure3);
+    startGame(templateObj.figure3);
 });
 
 figure4Btn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.simple.figure4);
+    startGame(templateObj.figure4);
 });
 
 
@@ -116,27 +116,27 @@ mediumLevelTemplates.append(postcardBtn, footballBtn, homeBtn, clownBtn, aerosta
 
 postcardBtn.addEventListener('click', ()=> {
     removePreviousGame();
-    startGame(templateObj.medium.postcard);
+    startGame(templateObj.postcard);
 });
 
 footballBtn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.medium.football);
+    startGame(templateObj.football);
 });
 
 homeBtn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.medium.home);
+    startGame(templateObj.home);
 });
 
 clownBtn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.medium.clown);
+    startGame(templateObj.clown);
 });
 
 aerostatBtn.addEventListener('click', ()=> {
     removePreviousGame() 
-    startGame(templateObj.medium.aerostat);
+    startGame(templateObj.aerostat);
 });
 
 
