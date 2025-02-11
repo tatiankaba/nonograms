@@ -19,5 +19,5 @@ body.dark-theme .logo {
 .girl-doll-wrapper {
     min-width: 40px;
     min-height: 40px;
-    background: url(../icons/girlDoll.png) center center / contain no-repeat;
+    background: url('../icons/girlDoll.png') center center / contain no-repeat;
 }
