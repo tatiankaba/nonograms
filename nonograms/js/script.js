@@ -21,7 +21,7 @@ body.append(levelWrapperBlock)
 body.append(templatesWrapper);
 body.append(gameNameTitleBlock)
 body.append(gameContainer);
-startGame(templateObj.figure)
+startGame(templateObj.clover)
 
 
 

@@ -72,3 +72,5 @@ easyLevelLabel.addEventListener('click', ()=> {
     templatesWrapper.append(easyLevelTemplates)
 })
 
+
+

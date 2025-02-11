@@ -1,15 +1,15 @@
 
 .puzzle {
     display: grid;
-    grid-template-columns: minmax(10%, auto)  minmax(50%, 1fr);
-    grid-template-rows: minmax(10%, auto)  minmax(50%, 1fr);
+    grid-template-columns: minmax(40px, auto) minmax(auto, 1fr);
+    grid-template-rows: minmax(40px, auto) minmax(auto, 1fr);
     grid-template-areas: 
     ". upperHints  "     
     "sideHints gameField"; 
-    height:auto;
+    width: auto;
+    height: auto;
     min-width: 500px;
     min-height: 500px;
-    width: 100%;
     max-width: fit-content;
     margin: 0 auto;
     margin-top: 20px;
@@ -30,7 +30,7 @@ body.light-theme .puzzle {
 .game-field {
     display: flex;
     grid-area: gameField;
-    max-width: 100%;
+    min-width: fit-content;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -38,7 +38,7 @@ body.light-theme .puzzle {
 .row {
     display: flex;
     flex-direction: row;
-    max-width: 100%;
+    width: 100%;
     flex-grow: 1;
 }
 
@@ -79,22 +79,33 @@ body.light-theme .grid-cell.crossed {
     background-size: contain;
 }
 
-.grid-cell, .hint {
+.grid-cell, .side-hints .hint {
     flex-grow: 1;
+    flex-shrink: 1;
+    max-height: 100px;
     width: 100%;
+    max-width: 100px;
+    height: 100%;
+    min-width: 40px;
+    min-height: 40px;;
+}
 
+.upper-hints .hint {
+    max-height: 100px;
+    width: 100%;
+    max-width: 100px;
+    flex-shrink: 1;
+    height: 100%;
 }
 
 .hint{
     background-color: var(--var-theme);
-    flex: 1 1 30px;
 }
 
 .upper-hints .hint {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    height: auto;
 }
 
 body.light-theme .hint {
@@ -109,6 +120,7 @@ body.light-theme .hint {
     column-gap: 0.5px;
     flex-grow: 1;
     justify-content: space-evenly;
+    flex-shrink: 0;
   
 }
 
@@ -131,7 +143,6 @@ body.dark-theme .upper-hints, body.dark-theme .side-hints {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    flex-shrink: 1;
     flex-grow: 1;
 }
 
