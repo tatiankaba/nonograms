@@ -16,8 +16,14 @@ body.dark-theme .logo {
     color: var(--var-pink-dark-theme-color);
 }
 
-.girl-doll-wrapper {
+body.light-theme .girl-doll-wrapper {
     min-width: 40px;
     min-height: 40px;
     background: url('../icons/girlDoll.png') center center / contain no-repeat;
+}
+
+body.dark-theme .girl-doll-wrapper {
+    min-width: 40px;
+    min-height: 40px;
+    background: url('../icons/dark-theme.png') center center / contain no-repeat;
 }

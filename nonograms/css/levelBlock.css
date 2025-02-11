@@ -17,6 +17,11 @@
 
 }
 
+.level-label:hover {
+    border: 1px solid var(--var-pink-dark-theme-color);
+    border-radius: 50%;
+}
+
 .labels-block {
     display: flex;
     gap: 5px;

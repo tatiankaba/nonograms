@@ -30,7 +30,6 @@ body.light-theme .puzzle {
 .game-field {
     display: flex;
     grid-area: gameField;
-    gap: 0.5px;
     max-width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
@@ -39,7 +38,6 @@ body.light-theme .puzzle {
 .row {
     display: flex;
     flex-direction: row;
-    gap: 0.5px;
     max-width: 100%;
     flex-grow: 1;
 }
@@ -47,6 +45,7 @@ body.light-theme .puzzle {
 .grid-cell, .empty {
     background-color: var(--var-theme);
     cursor: pointer;
+    border: 0.5px solid black;
 }
 
 

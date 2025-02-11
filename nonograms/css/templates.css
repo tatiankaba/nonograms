@@ -1,10 +1,11 @@
-.template-wrapper {
+.template-wrapper, .simple, .medium, .hard {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px;
     padding: 10px 8px;
+    min-height: 50px;
 }
 
 .game-name-block {
