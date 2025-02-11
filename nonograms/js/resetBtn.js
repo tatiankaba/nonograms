@@ -4,8 +4,7 @@ import { gameNameTitle } from './templates.js';
 import { templateObj } from './templateObj.js';
 
 
- 
-const body = document.body;
+
 export const resetBtn = document.createElement('button');
 resetBtn.classList.add('btn')
 resetBtn.textContent = 'reset the game'
@@ -15,12 +14,14 @@ const clickHandler = () => {
         gameContainer.firstChild.remove(); 
     }
     resetTimer();
-    const gameName = gameNameTitle.textContent;
+    let gameName = gameNameTitle.textContent;
     const gameTemplates = {...templateObj.simple};
     for (let gameKey in gameTemplates) {
         const game = gameTemplates[gameKey];
         if (game.gameName === gameName) {
-               startGame(templateObj.simple[gameName])
+            gameName = gameName.split(' ').join('')
+            console.log(templateObj.simple[gameName]);
+            startGame(templateObj.simple[gameName]);
         }
     }
 }
