@@ -16,7 +16,8 @@ const easyLevelInput = document.createElement('input');
 easyLevelInput.name = 'levelCookies';
 easyLevelInput.id = 'easy';
 easyLevelInput.value = 'simple';
-easyLevelInput.type = 'radio'
+easyLevelInput.type = 'radio';
+easyLevelInput.checked = true;
 easyLevelInput.classList.add('level-input');
 
 const easyLevelLabel = document.createElement('label');

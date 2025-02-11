@@ -17,7 +17,7 @@
 
 }
 
-.level-label:hover {
+.level-label:hover, .level-label:has(input:checked)    {
     border: 1px solid var(--var-pink-dark-theme-color);
     border-radius: 50%;
 }
