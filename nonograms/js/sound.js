@@ -54,19 +54,25 @@ backgroundAudio.loop = true;
 backgroundAudio.muted = true; 
 backgroundAudio.autoplay = true;
 
-
 export function playBackgroundMusic() {
     if(soundInput.checked) {
         backgroundAudio.muted = false;
         backgroundAudio.play();
     }
 }
-
 export function resumeBackgroundMusic() {
     if(soundInput.checked &&  backgroundAudio.paused) {
         backgroundAudio.play();
-    
     }
 }
+
+const resetBtnAudio = new Audio('./sounds/resetBtn.mp3');
+
+export function playResetBtnAudio() {
+    if(soundInput.checked) {
+        resetBtnAudio.play();
+    }
+}
+
 
 

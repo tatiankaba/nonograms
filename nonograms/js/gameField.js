@@ -137,6 +137,14 @@ export function startGame(obj) {
   }
 
   const rightClickHandler = (event) => {
+    switch (event.target.getAttribute("data-index")) {
+      case "5":
+        event.target.setAttribute("data-index", "2");
+        break;
+      case "3":
+        event.target.setAttribute("data-index", "0");
+        break;
+    }
     playBackgroundMusic();
     event.preventDefault();
     if (event.target.classList.contains("empty")) {

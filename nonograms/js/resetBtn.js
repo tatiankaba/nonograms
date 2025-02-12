@@ -2,6 +2,7 @@ import { startGame, gameContainer } from './gameField.js';
 import { resetTimer } from './timeCount.js';
 import { gameNameTitle } from './templates.js';
 import { templateObj } from './templateObj.js';
+import { playResetBtnAudio } from './sound.js';
 
 
 
@@ -10,6 +11,7 @@ resetBtn.classList.add('btn')
 resetBtn.textContent = 'reset the game'
 
 const clickHandler = () => {
+    playResetBtnAudio();
     while (gameContainer.firstChild) {
         gameContainer.firstChild.remove(); 
     }
