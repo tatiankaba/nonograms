@@ -214,7 +214,7 @@ export const templateObj = {
   },
 
 
-}
+};
 
 
 

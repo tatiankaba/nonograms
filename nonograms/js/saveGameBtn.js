@@ -1,5 +1,6 @@
 'use strict'
 import { seconds, minutes } from './timeCount.js';
+import { showSavedGamePopUp } from './modal.js';
 
 
 function readCurrentStateGame() {
@@ -26,6 +27,7 @@ function clearLocalStorage() {
 }
 
 function saveGameDataToLocalStorage() {
+    showSavedGamePopUp();
       localStorage.setItem('savedGame',readCurrentStateGame() )
 }
 

@@ -46,3 +46,11 @@ export function openContinueModal(message) {
     inscriptionWrapper.textContent = 'No saved games'
 }
 
+export function showSavedGamePopUp() {
+    const popUp = document.createElement('div');
+    popUp.classList.add('information-pop-up')
+    popUp.textContent = 'saved';
+    body.append(popUp);
+    setTimeout(()=> {
+    body.removeChild(popUp)}, 500)
+}
