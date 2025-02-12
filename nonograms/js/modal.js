@@ -1,4 +1,6 @@
-'use strict'
+'use strict';
+
+import { resumeBackgroundMusic } from "./sound.js";
 
 const body = document.body;
 const overlay = document.createElement('div');
@@ -23,6 +25,7 @@ body.append(overlay);
 
 const closeModal = (event) => {
     if(event.target.classList.contains('overlay') || event.target.classList.contains('close-btn')) {
+        resumeBackgroundMusic();
         overlay.style.display = 'none';
         body.style.overflow = 'auto';
     }

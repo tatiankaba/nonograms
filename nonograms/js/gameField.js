@@ -2,7 +2,7 @@
 import "./modal.js";
 import { openModal } from "./modal.js";
 import { timerWrapper, updateTimer, minutes, seconds } from "./timeCount.js";
-import { playSound, playWinSound } from "./sound.js";
+import { playSound, playWinSound,playBackgroundMusic} from "./sound.js";
 import { gameNameTitle } from "./templates.js";
 
 const body = document.body;
@@ -99,6 +99,7 @@ export function startGame(obj) {
   }
 
   const leftClickHandler = (event) => {
+    playBackgroundMusic();
     playSound();
     switch (event.target.getAttribute("data-index")) {
       case "2":
@@ -136,6 +137,7 @@ export function startGame(obj) {
   }
 
   const rightClickHandler = (event) => {
+    playBackgroundMusic();
     event.preventDefault();
     if (event.target.classList.contains("empty")) {
       event.target.classList.add("crossed");

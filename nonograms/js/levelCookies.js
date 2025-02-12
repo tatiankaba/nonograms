@@ -1,6 +1,6 @@
 'use strict';
 
-import { mediumLevelTemplates, easyLevelTemplates, templatesWrapper } from "./templates.js";
+import { mediumLevelTemplates, easyLevelTemplates, templatesWrapper, hardLevelTemplates } from "./templates.js";
 
 
 export const levelWrapperBlock = document.createElement('div');
@@ -71,6 +71,15 @@ easyLevelLabel.addEventListener('click', ()=> {
     }
     templatesWrapper.append(easyLevelTemplates)
 })
+
+
+hardLevelLabel.addEventListener('click', ()=> {
+    while (templatesWrapper.firstChild) {
+        templatesWrapper.firstChild.remove(); 
+    }
+    templatesWrapper.append(hardLevelTemplates)
+})
+
 
 
 

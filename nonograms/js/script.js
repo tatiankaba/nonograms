@@ -9,7 +9,7 @@ import { templatesWrapper, gameNameTitleBlock} from './templates.js';
 import { logo } from './logo.js';
 import { timeBlock } from './timeCount.js';
 import { templateObj } from './templateObj.js';
-import { levelWrapperBlock} from './levelCookies.js'
+import { levelWrapperBlock} from './levelCookies.js';
 
 const body = document.body;
 
@@ -21,7 +21,7 @@ body.append(levelWrapperBlock)
 body.append(templatesWrapper);
 body.append(gameNameTitleBlock)
 body.append(gameContainer);
-startGame(templateObj.clover)
+startGame(templateObj.figure);
 
 
 

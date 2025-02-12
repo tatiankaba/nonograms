@@ -94,12 +94,12 @@ postcardBtn.textContent = 'postcard'
 const footballBtn = document.createElement('button');
 footballBtn.classList.add('btn');
 footballBtn.classList.add('templateBtn');
-footballBtn.textContent = 'football'
+footballBtn.textContent = 'football';
 
 const homeBtn = document.createElement('button');
 homeBtn.classList.add('btn');
 homeBtn.classList.add('templateBtn');
-homeBtn.textContent = 'home'
+homeBtn.textContent = 'home';
 
 const clownBtn = document.createElement('button');
 clownBtn.classList.add('btn');
@@ -140,8 +140,41 @@ aerostatBtn.addEventListener('click', ()=> {
 });
 
 
+// hard level
 
+export const hardLevelTemplates = document.createElement('div');
+hardLevelTemplates.classList.add('medium');
 
+const cloverBtn = document.createElement('button');
+cloverBtn.classList.add('btn');
+cloverBtn.classList.add('templateBtn');
+cloverBtn.textContent = 'clover'
 
+const shadesBtn = document.createElement('button');
+shadesBtn.classList.add('btn');
+shadesBtn.classList.add('templateBtn');
+shadesBtn.textContent = 'shades';
+
+const castleBtn = document.createElement('button');
+castleBtn.classList.add('btn');
+castleBtn.classList.add('templateBtn');
+castleBtn.textContent = 'castle';
+
+castleBtn.addEventListener('click', ()=> {
+    removePreviousGame() 
+    startGame(templateObj.castle);
+});
+
+shadesBtn.addEventListener('click', ()=> {
+    removePreviousGame() 
+    startGame(templateObj.shades);
+});
+
+cloverBtn.addEventListener('click', ()=> {
+    removePreviousGame() 
+    startGame(templateObj.clover);
+});
+
+hardLevelTemplates.append(cloverBtn,shadesBtn,castleBtn);
 
 
