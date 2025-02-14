@@ -18,7 +18,7 @@ hardLevelTemplates.classList.add("hard");
 
 templatesWrapper.append(easyLevelTemplates);
 
-function removePreviousGame() {
+export function removePreviousGame() {
   resetTimer();
   while (gameContainer.firstChild) {
     gameContainer.firstChild.remove();

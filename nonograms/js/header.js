@@ -9,6 +9,7 @@ import { solutionBtn } from './solutionBtn.js';
 import { soundBtn } from './sound.js';
 import { saveBtn } from './saveGameBtn.js';
 import { continueBtn } from './continueBtn.js';
+import { randomGame } from './randomBtn.js';
 
 
 export const header = document.createElement('header');
@@ -22,5 +23,6 @@ header.append(resetBtn);
 header.append(solutionBtn);
 header.append(saveBtn);
 header.append(continueBtn);
+header.append(randomGame)
 header.append(switcherLabel);
 
