@@ -4,6 +4,7 @@ import { openModal } from "./modal.js";
 import { timerWrapper, updateTimer, minutes, seconds } from "./timeCount.js";
 import { playSound, playWinSound,playBackgroundMusic} from "./sound.js";
 import { gameNameTitle } from "./templates.js";
+import { addWinnerToLocalStorage, stringToSeconds} from "./winners.js";
 
 const body = document.body;
 export const gameContainer = document.createElement("div");
@@ -93,6 +94,7 @@ export function startGame(obj) {
       const timeFinished = timerWrapper.textContent;
       stopTimer();
       openModal(timeFinished);
+      addWinnerToLocalStorage({name: obj.gameName, level: obj.level, time: stringToSeconds(timeFinished), secMinTime: timeFinished})
       playWinSound();
       return true;
     }

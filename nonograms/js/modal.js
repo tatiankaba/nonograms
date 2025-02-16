@@ -54,3 +54,42 @@ export function showSavedGamePopUp() {
     setTimeout(()=> {
     body.removeChild(popUp)}, 500)
 }
+
+export function openWinnerTable(winners) {
+    overlay.style.display = 'block';
+    body.style.overflow = 'hidden';
+    const winnersWrapper = document.createElement('div');
+    inscriptionWrapper.textContent = '';
+    if(winners) {
+        const title = document.createElement('div');
+        title.classList.add('winners-title');
+        title.textContent = 'winners';
+        inscriptionWrapper.append(winnersWrapper);
+        winnersWrapper.classList.add('winners-wrapper')
+        winnersWrapper.append(title);
+        let count = 1;
+        winners.forEach((winner)=> {
+            const winnerRow = document.createElement('div');
+            winnerRow.classList.add('winner-row');
+            const num =  document.createElement('div');
+            num.classList.add('winner-num');
+            num.textContent = `${count}.`
+            const gameName =  document.createElement('div');
+            gameName.classList.add('winner-game-name');
+            gameName.textContent = `${winner.name}`;
+            const level =  document.createElement('div');
+            level.classList.add('winner-level');
+            level.textContent = `${winner.level}`;
+            const time =  document.createElement('div');
+            time.classList.add('winner-level');
+            time.textContent = `${winner.secMinTime}`;
+            winnerRow.append(num, gameName,level, time);
+            winnersWrapper.append(winnerRow);
+            count++;
+        })
+
+    } else {
+        inscriptionWrapper.textContent = 'no winners';
+    }
+
+}

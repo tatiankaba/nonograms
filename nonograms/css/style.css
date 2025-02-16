@@ -10,7 +10,7 @@
 @import 'root.css';
 @import 'levelBlock.css';
 @import 'popup.css';
-
+@import 'winner.css';
 
 body {
     overflow: auto;
