@@ -21,12 +21,3 @@
     grid-template-columns: auto;
     max-width: fit-content;
 }
-
-.winners-title {
-    grid: 1/4;
-}
-
-
-.winner-num {
-    grid-column: 1/2;
-}

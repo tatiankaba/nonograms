@@ -106,7 +106,7 @@ export function startGame(obj) {
     switch (event.target.getAttribute("data-index")) {
       case "2":
         event.target.setAttribute("data-index", "5");
-        isWon();
+
         break;
       case "0":
         event.target.setAttribute("data-index", "3");
@@ -129,6 +129,8 @@ export function startGame(obj) {
       event.target.classList.remove("crossed");
       event.target.classList.add("empty");
     }
+
+    isWon();
   };
 
   gameField.addEventListener("click", leftClickHandler);
@@ -160,6 +162,8 @@ export function startGame(obj) {
       event.target.classList.remove("crossed");
       event.target.classList.add("empty");
     }
+
+    isWon();
   };
 
   localStorage.setItem("currentGame", JSON.stringify(obj));
