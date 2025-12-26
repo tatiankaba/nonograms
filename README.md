@@ -3,6 +3,8 @@
 ## 📌 Task Description
 This project is an implementation of the **Nonograms** task from the Rolling Scopes School curriculum.
 
+https://github.com/rolling-scopes-school/tasks/tree/master/tasks/nonograms
+
 The goal of the task was to create a browser-based logic puzzle game (**Nonograms / Picross**) strictly following the provided technical specification (TS), without using external libraries or frameworks.
 
 ---
